@@ -4,7 +4,7 @@
 
 ## moduleとは何ぞ
 
-tsconfig.jsonまたは `--module exnext` オプションで指定ができる。
+tsconfig.jsonまたは `--module ***` オプションで指定ができる。
 
 {% tabs %}
 {% tab title="tsconfig.json" %}
