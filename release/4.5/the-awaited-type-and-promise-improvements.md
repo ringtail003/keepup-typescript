@@ -50,10 +50,7 @@ fetchUser().theeeeen(); // Error
 ```
 
 ```typescript
-async function fetchUser() {
-    return { id: 1 };
-}
-
+// 推論によって「id」がエディタでサジェストされる
 fetchUser().then(user => {
   console.log(user.id);
 });
