@@ -6,3 +6,5 @@
 
 * [4.5](release/4.5/README.md)
   * [Supporting lib from node\_modules](release/4.5/supporting-lib-from-node\_modules.md)
+* [4.4](release/4.4.md)
+* [4.3](release/4.3.md)
