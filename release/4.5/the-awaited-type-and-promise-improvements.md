@@ -58,13 +58,14 @@ fetchUser().then(user => {
 
 では、`fetchUser` の返す「値」を「型」として定義したい時はどうするか？これが追加された機能の本題になる。
 
-<pre class="language-typescript"><code class="lang-typescript">async function fetchUser() {
+```typescript
+async function fetchUser() {
     return { id: 1 };
 }
+type FetchUserType = Promise<{ id: 1 }>;
 
-<strong>type FetchUserType = Promise&#x3C;{ id: 1 }>;
-</strong><strong>
-</strong><strong>// { id:1 } をうまいこと型定義できないか？</strong></code></pre>
+// { id:1 } をうまいこと型定義できないか？？
+```
 
 ## Promiseから値の型を導出（従来）
 
@@ -82,9 +83,8 @@ type FetchUserReturnType = ReturnType<typeof fetchUser>;
 type UnWrapped<T> = T extends Promise<infer R> ? R : T;
 
 // (3)Promise<fetchUserの戻り値>から戻り値を取り出す
-type FetchUserType = UnWrapped<FetchUserReturnType>;
-
-// FetchUserType: { id: number }
+type XXX = UnWrapped<FetchUserReturnType>;
+// { id: number }
 ```
 
 ## Pormiseから値の型を導出（新）
@@ -100,9 +100,8 @@ async function fetchUser() {
 type FetchUserReturnType = ReturnType<typeof fetchUser>;
 
 // (2)Promise<fetchUserの戻り値>から戻り値を取り出す
-type FetchUserType = Awaited<FetchUserReturnType>;
-
-// FetchUserType: { id: number }
+type XXX = Awaited<FetchUserReturnType>;
+// { id: number }
 ```
 
 ## Awaitedの優れた点：ネストに対応
@@ -115,14 +114,12 @@ function promisefy<T>(value: T): Promise<T> {
 }
 
 const promise = promisefy(promisefy(promisefy(100)));
-
-// ３重にネストしたPromiseになる。
 // promise:Promise<Promise<Promise<number>>>
 
-// お題：ここから「number」を取り出すには？
+// ここから「number」を取り出すには？
 ```
 
-前述の `infer` を使った導出はネストに対応していない。がんばれば値を導出できるが「開発者が都度がんばる」というところに問題がある。
+前述の `infer` を使った導出はネストに対応していない。
 
 {% code title="前述の導出を使う" %}
 ```typescript
@@ -131,8 +128,14 @@ type UnWrapped<T> = T extends Promise<infer R> ? R : T;
 type XXX = UnWrapped<typeof promise>;
 // Promise<Promise<number>
 // まだネストしてる
+
+type YYY = UnWrapped<UnWrapped<UnWrapped<typeof promise>>>;
+// number
+// うーん...導出できたけど...微妙
 ```
 {% endcode %}
+
+がんばれば値を導出できるが「開発者が都度がんばる」というところに問題がある。
 
 {% code title="開発者ががんばる" overflow="wrap" %}
 ```typescript
