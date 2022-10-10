@@ -121,6 +121,8 @@ const promise = promisefy(promisefy(promisefy(100)));
 
 // ３重にネストしたPromiseになる。
 // promise:Promise<Promise<Promise<number>>>
+
+// お題：ここから「number」を取り出すには？
 ```
 
 前述の `infer` を使った導出はネストに対応していない。がんばれば値を導出できるが「開発者が都度がんばる」というところに問題がある。
