@@ -52,9 +52,11 @@ exports.twoPi = constants_1.valueOfPi * 2;
 
 ## TypeScript PlayGround
 
-「TS Config」で `module:es2022` とすると、確かにエラーが出なくでなくなっている。
+「TS Config」で `module:es2022` とすると、確かにコンパイルエラーは発生しない。
 
 <figure><img src="../../.gitbook/assets/スクリーンショット 2022-10-10 23.29.49.png" alt=""><figcaption></figcaption></figure>
+
+`module:es2020` に変更した例。コンパイルエラーが発生した。
 
 <figure><img src="../../.gitbook/assets/スクリーンショット 2022-10-10 23.32.48.png" alt=""><figcaption></figcaption></figure>
 
