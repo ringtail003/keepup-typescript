@@ -233,10 +233,10 @@ V4.5で導入された「末尾再帰の削除」によって、Conditional Type
 
 ```typescript
 // 以前のバージョン: RangeError
-type X = TrimLeft("                                          foobar");
+type X = TrimLeft("                                   foobar");
 
 // V4.5: OK
-type X = TrimLeft("                                          foobar");
+type X = TrimLeft("                                   foobar");
 ```
 
 ### Union Typeは末尾再帰が削除されない
