@@ -229,14 +229,14 @@ function trimLeft(str) {
 trimLeft("                                          foobar");
 ```
 
-V4.5で導入された「末尾再帰の削除」によって、このタイプのオーバーフローは発生しなくなった。
+V4.5で導入された「末尾再帰の削除」によって、Conditional Typeのオーバーフローは発生しなくなった。
 
 ```typescript
 // 以前のバージョン: RangeError
-trimLeft("                                          foobar");
+type X = TrimLeft("                                          foobar");
 
 // V4.5: OK
-trimLeft("                                          foobar");
+type X = TrimLeft("                                          foobar");
 ```
 
 ### Union Typeは末尾再帰が削除されない
