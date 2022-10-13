@@ -120,7 +120,7 @@ fn(0, "hello world world world");
 1回目 | fn{n:3,char:"hello"}
 ```
 
-スタックフレームがある一定数を超えると、それ以上メモリを食いつぶさないようにオーバーフローが発生する。
+スタックフレームがある一定数を超えると、メモリを食いつぶさないようにオーバーフローが発生する。
 
 <pre class="language-typescript"><code class="lang-typescript"><strong>n回目 | RangeError: Maximum call stack size exceeded
 </strong><strong>...
