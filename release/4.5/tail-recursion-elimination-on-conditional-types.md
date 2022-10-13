@@ -63,11 +63,12 @@ function fn(n) {
 ユースケースは実行時でないとネストの深さが分からないもの。ツリー上になったDOM構造や、中に何が入っているのか分からないPromiseやZipファイルなんかにも当てはめて考えられる。
 
 ```typescript
+// zipファイルを解凍するイメージ
 function unzip(file) {
   if (file.type !== "zip") {
     return file;
   }
-  return unzip(file);
+  return unzip(file.getFile());
 }
 ```
 
