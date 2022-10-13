@@ -83,7 +83,7 @@ function fn(n) {
 // 末尾再帰ではない
 function fn(n) {
   ...
-  fn(n - 1);
+  fn(n - 1); // 👈 再帰
   return 1;
 }
 ```
