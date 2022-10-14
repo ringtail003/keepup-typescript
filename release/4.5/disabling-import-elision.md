@@ -2,11 +2,11 @@
 
 コンパイラオプション `--preserveValueImports` が導入された。
 
-## 未使用のimport
+## 未使用のインポート
 
-インポートされた変数や型が未使用と判断される時、トランスパイル後のJavaScriptには出力されない。
+インポートされた変数や型がTypeScriptによって「未使用」と判断される時、トランスパイル後のJavaScriptには出力されない。
 
-evalを使ってランタイムで変数を参照するケースなどが該当する。
+この挙動で困るのはevalを使ってランタイムで変数を参照するようなケース。
 
 ```typescript
 // foo.ts
@@ -29,7 +29,7 @@ console.log(eval("foo"));
 export {};
 ```
 
-`eval` は与えられたテキストをJavaScriptのコードとして実行する。`foo` をJavaScriptのコードとして実行すると未定義の変数と評価され、ランタイムエラーが発生する。
+`eval` は与えられたテキストをJavaScriptのコードとして実行する。`foo` の実体はトランスパイラによって削除されているためランタイムエラーが発生する。
 
 ```bash
 ReferenceError: foo is not defined
@@ -64,6 +64,7 @@ ReferenceError: foo is not defined
 ```
 
 ```javascript
+// bar.js（トランスパイルによって出力されたJavaScript）
 console.log(eval("foo"));
 export {};
 ```
@@ -79,13 +80,18 @@ export {};
 ```
 
 ```javascript
+// bar.js（トランスパイルによって出力されたJavaScript）
 import { foo } from "./foo";
 console.log(eval("foo"));
 ```
 
 ## --isolatedModules
 
-`isolatedModules` オプションと同時に指定する場合、型をインポートする場合に注意が必要。
+`preserveValueImports` を `isolatedModules` オプションと同時に指定する場合、型のインポートで注意が必要。
+
+{% hint style="info" %}
+`isolatedModules` はTypeScriptの標準コンパイラ `tsc` 以外でトランスパイルすることを目的としたオプション。esbuildのように複数の `.ts` をまとめて単一のファイル `.js` に出力するものがあり `isolatedModules` はそこに配慮して「単一ファイルに出力すると不整合が起こる」ことを警告する。
+{% endhint %}
 
 ```typescript
 // foo.ts
@@ -97,8 +103,6 @@ export type Foo = {};
 import { Foo } from "./foo";
 const foo: Foo = {};
 ```
-
-`isolatedModules` はTypeScriptの標準コンパイラ `tsc` 以外でトランスパイルすることを目的としたオプション。esbuildのように複数の `.ts` をまとめて単一のファイル `.js` に出力するものがあり `isolatedModules` はそこに配慮して「単一ファイルに出力すると不整合が起こる」ことを警告する。
 
 上のコードを `isolatedModules:true` にして `tsc` に渡すとエラーが発生する。
 
