@@ -10,5 +10,6 @@
   * [Template String Types as Discriminants](release/4.5/template-string-types-as-discriminants.md)
   * [module es2022](release/4.5/module-es2022.md)
   * [Tail-Recursion Elimination on Conditional Types](release/4.5/tail-recursion-elimination-on-conditional-types.md)
+  * [Disabling Import Elision](release/4.5/disabling-import-elision.md)
 * [4.4](release/4.4.md)
 * [4.3](release/4.3.md)
