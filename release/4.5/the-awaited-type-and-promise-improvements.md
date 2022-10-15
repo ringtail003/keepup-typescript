@@ -139,7 +139,9 @@ type YYY = UnWrapped<UnWrapped<UnWrapped<typeof promise>>>;
 
 {% code title="開発者ががんばる" overflow="wrap" %}
 ```typescript
-type UnWrapped<T> = T extends Promise<infer R> ? R extends Promise<any> ? UnWrapped<R> : R : T;
+type UnWrapped<T> = T extends Promise<infer R> 
+  ? R extends Promise<any> ? UnWrapped<R> : R 
+  : T;
 
 type XXX = UnWrapped<typeof promise>;
 // number
@@ -147,7 +149,7 @@ type XXX = UnWrapped<typeof promise>;
 ```
 {% endcode %}
 
-:tada: `Awaited` を使うと、いとも簡単に値を導出できる。
+`Awaited` を使うと簡単に値を導出できる。
 
 ```typescript
 type XXX = Awaited<typeof promise>;
