@@ -14,5 +14,6 @@
   * [type Modifiers on Import Names](release/4.5/type-modifiers-on-import-names.md)
   * [Private Field Presence Checks](release/4.5/private-field-presence-checks.md)
   * [Import Assertions](release/4.5/import-assertions.md)
+  * [Faster Load Time with realPathSync.native](release/4.5/faster-load-time-with-realpathsync.native.md)
 * [4.4](release/4.4.md)
 * [4.3](release/4.3.md)
