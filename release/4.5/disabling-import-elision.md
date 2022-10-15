@@ -47,8 +47,6 @@ ReferenceError: foo is not defined
 
 ## --preserveValueImports
 
-[https://www.typescriptlang.org/ja/tsconfig#preserveValueImports](https://www.typescriptlang.org/ja/tsconfig#preserveValueImports)
-
 新しく導入されたオプションで未使用のインポートをコントロールできるようになった。
 
 {% hint style="info" %}
@@ -88,8 +86,6 @@ console.log(eval("foo"));
 ```
 
 ## --isolatedModules
-
-[https://www.typescriptlang.org/ja/tsconfig#isolatedModules](https://www.typescriptlang.org/ja/tsconfig#isolatedModules)
 
 `preserveValueImports` を `isolatedModules` オプションと同時に指定する場合、型のインポートで注意が必要。
 

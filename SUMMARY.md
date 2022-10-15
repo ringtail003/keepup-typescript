@@ -11,5 +11,6 @@
   * [module es2022](release/4.5/module-es2022.md)
   * [Tail-Recursion Elimination on Conditional Types](release/4.5/tail-recursion-elimination-on-conditional-types.md)
   * [Disabling Import Elision](release/4.5/disabling-import-elision.md)
+  * [type Modifiers on Import Names](release/4.5/type-modifiers-on-import-names.md)
 * [4.4](release/4.4.md)
 * [4.3](release/4.3.md)
