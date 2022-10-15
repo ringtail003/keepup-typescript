@@ -16,5 +16,6 @@
   * [Import Assertions](release/4.5/import-assertions.md)
   * [Faster Load Time with realPathSync.native](release/4.5/faster-load-time-with-realpathsync.native.md)
   * [Snippet Completions for JSX Attributes](release/4.5/snippet-completions-for-jsx-attributes.md)
+  * [Better Editor Support for Unresolved Types](release/4.5/better-editor-support-for-unresolved-types.md)
 * [4.4](release/4.4.md)
 * [4.3](release/4.3.md)
