@@ -42,10 +42,6 @@ tsconfig.jsonの「compilerOption」で宣言するべきオプションが「co
 
 {% tabs %}
 {% tab title="従来" %}
-{% hint style="success" %}
-エラーなし
-{% endhint %}
-
 ```typescript
 // tsconfig.json
 {
@@ -55,25 +51,29 @@ tsconfig.jsonの「compilerOption」で宣言するべきオプションが「co
   }
 }
 ```
+
+{% hint style="success" %}
+エラーなし
+{% endhint %}
 {% endtab %}
 
 {% tab title="V4.5" %}
+```typescript
+// tsconfig.json
+{
+  "target": "2017", // <=== 本来「compilerOptions」の下にないといけないやつ
+  "compilerOptions": {
+    ...
+  }
+}
+```
+
 {% hint style="danger" %}
 ```
 Error: 'target' should be set inside the 'compilerOptions'
 object of the config json file
 ```
 {% endhint %}
-
-```typescript
-// tsconfig.json
-{
-  "target": "2017",
-  "compilerOptions": {
-    ...
-  }
-}
-```
 {% endtab %}
 {% endtabs %}
 
