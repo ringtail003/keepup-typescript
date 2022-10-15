@@ -99,35 +99,35 @@ function fn(n, char) {
   return fn(n - 1, `${char} world`);
 }
 
-fn(3, "hello"); // "hellow world world world"
+fn(3, "the"); // "the world world world"
 ```
 
 関数は1回呼ばれ、3回再帰している。
 
 ```typescript
-fn(3, "hello");
-fn(2, "hello world");
-fn(1, "hello world world");
-fn(0, "hello world world world");
+fn(3, "the");
+fn(2, "the world");
+fn(1, "the world world");
+fn(0, "the world world world");
 ```
 
 関数が呼ばれるとコールスタックにスタックフレームが積まれていく。
 
 ```typescript
-4回目 | fn{n:0,char:"hello world world world"}
-3回目 | fn{n:1,char:"hello world world"}
-2回目 | fn{n:2,char:"hello world"}
-1回目 | fn{n:3,char:"hello"}
+4回目 | fn{n:0,char:"the world world world"}
+3回目 | fn{n:1,char:"the world world"}
+2回目 | fn{n:2,char:"the world"}
+1回目 | fn{n:3,char:"the"}
 ```
 
 スタックフレームがある一定数を超えると、メモリを食いつぶさないようにオーバーフローが発生する。
 
 <pre class="language-typescript"><code class="lang-typescript"><strong>n回目 | RangeError: Maximum call stack size exceeded
 </strong><strong>...
-</strong><strong>4回目 | fn{n:0,char:"hello world world world"}
-</strong>3回目 | fn{n:1,char:"hello world world"}
-2回目 | fn{n:2,char:"hello world"}
-1回目 | fn{n:3,char:"hello"}</code></pre>
+</strong><strong>4回目 | fn{n:0,char:"the world world world"}
+</strong>3回目 | fn{n:1,char:"the world world"}
+2回目 | fn{n:2,char:"the world"}
+1回目 | fn{n:3,char:"the"}</code></pre>
 
 この関数の例では6070回あたりでオーバーフローした（Chrome v108）。
 
@@ -138,7 +138,7 @@ fn(0, "hello world world world");
 ```typescript
 function fn() {
   let n = 0;
-  let char = "hello";
+  let char = "the";
   
   while (n < 10000) {
     char = `${char} world`;
@@ -152,7 +152,7 @@ fn();
 forやwhileは1つしかスタックフレームが積まれないので、スタックフレームのオーバーフローは発生しない。
 
 ```typescript
-1回目 | fn{n:0,char:"hello world"}
+1回目 | fn{n:0,char:"the world"}
 // この1回の呼び出しでnとcharがどんどん書き換えられていく
 ```
 
