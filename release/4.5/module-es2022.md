@@ -51,13 +51,13 @@ exports.twoPi = constants_1.valueOfPi * 2;
 
 参考： [https://qiita.com/hareku/items/dbf0752aa76499a895fd](https://qiita.com/hareku/items/dbf0752aa76499a895fd)
 
-## TypeScript PlayGround
+## top-level awaitを使ってみる
 
-「TS Config」で `module:es2022` とすると、確かにコンパイルエラーは発生しない。
+「TS Config」で `module:es2022` とする。
 
 <figure><img src="../../.gitbook/assets/スクリーンショット 2022-10-10 23.29.49.png" alt=""><figcaption></figcaption></figure>
 
-`module:es2020` に変更した例。コンパイルエラーが発生した。
+`module:es2020` など古いバージョンではtop-level awaitは使えない。
 
 <figure><img src="../../.gitbook/assets/スクリーンショット 2022-10-10 23.32.48.png" alt=""><figcaption></figcaption></figure>
 
