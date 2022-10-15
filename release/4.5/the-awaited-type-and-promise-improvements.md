@@ -106,7 +106,7 @@ type XXX = Awaited<FetchUserReturnType>;
 
 ## Awaitedの優れた点：ネストに対応
 
-Promiseのネストを表現してみる。もうちょっとマシなサンプルを書きたかったけど初見殺しなコードしか書けなかった...。
+Promiseのネストを表現してみる。
 
 ```typescript
 function promisefy<T>(value: T): Promise<T> {
