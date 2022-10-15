@@ -106,7 +106,7 @@ type XXX = Awaited<FetchUserReturnType>;
 
 ## Awaitedの優れた点：ネストに対応
 
-Promiseのネストを表現してみる。
+Promiseのネストを表現してみる。もうちょっとマシなサンプルを書きたかったけど初見殺しなコードしか書けなかった...。
 
 ```typescript
 function promisefy<T>(value: T): Promise<T> {
@@ -139,9 +139,7 @@ type YYY = UnWrapped<UnWrapped<UnWrapped<typeof promise>>>;
 
 {% code title="開発者ががんばる" overflow="wrap" %}
 ```typescript
-type UnWrapped<T> = T extends Promise<infer R> 
-  ? R extends Promise<any> ? UnWrapped<R> : R 
-  : T;
+type UnWrapped<T> = T extends Promise<infer R> ? R extends Promise<any> ? UnWrapped<R> : R : T;
 
 type XXX = UnWrapped<typeof promise>;
 // number
@@ -149,7 +147,7 @@ type XXX = UnWrapped<typeof promise>;
 ```
 {% endcode %}
 
-`Awaited` を使うと簡単に値を導出できる。
+:tada: `Awaited` を使うと、いとも簡単に値を導出できる。
 
 ```typescript
 type XXX = Awaited<typeof promise>;

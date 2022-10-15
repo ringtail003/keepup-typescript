@@ -14,17 +14,18 @@ tsconfig.jsonまたは `--module ***` オプションで指定ができる。
 {% endtab %}
 {% endtabs %}
 
-どのようなモジュールパターンの環境で使われるか（Node.jsなら `CommonJS` 、ブラウザなら `umd` や `es****` など）に合わせて指定するもの。
+`module` とは、どのようなモジュールパターンの環境で使われるかを指定するもの。\
+指定によってトランスパイル後のJavaScriptに変化が生じる。
 
 {% tabs %}
-{% tab title="ES2020" %}
+{% tab title="module:"es2022"" %}
 ```javascript
 import { valueOfPi } from "./constants";
 export const twoPi = valueOfPi * 2;
 ```
 {% endtab %}
 
-{% tab title="CommonJS" %}
+{% tab title="module:"CommonJS"" %}
 ```javascript
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -34,7 +35,7 @@ exports.twoPi = constants_1.valueOfPi * 2;
 ```
 {% endtab %}
 
-{% tab title="UMD" %}
+{% tab title="module:"umd"" %}
 ```javascript
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
