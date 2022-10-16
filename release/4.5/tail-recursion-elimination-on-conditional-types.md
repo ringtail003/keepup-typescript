@@ -49,7 +49,7 @@ type Chars = GetChars<"無駄無駄無駄無駄無駄無駄無駄無駄無駄無
 ```
 {% endcode %}
 
-## 型の再帰
+## 再帰
 
 プログラミングの一般的な手法で自分自身を呼び出す「再帰」というものがある。
 
@@ -133,7 +133,7 @@ fn(0, "the world world world");
 
 この関数の例では6070回あたりでオーバーフローした（Chrome v108）。
 
-## 最適化
+## 再帰の最適化
 
 オーバーフローを避けるため、forやwhileなどに書き換える解決策がある。
 
@@ -154,14 +154,18 @@ fn();
 forやwhileは1つしかスタックフレームが積まれないので、スタックフレームのオーバーフローは発生しない。
 
 ```typescript
-1回目 | fn{n:0,char:"the world"}
+1回目 | fn{n:3,char:"the"}
 ```
 
 ```typescript
-2 | fn{n:0,char:"the world"}a
+2回目 | fn{n:2,char:"the world"}
 ```
 
-このような最適化をサポートする言語もあり、自分でfor/whileに書き換えなくともコンパイラがfor/while相当の処理に変換してくれる。JavaScriptでも言語レベルのサポートが検討されていてES6に仕様が盛り込まれているが、Safariにしか実装されていない（2022/10時点）。
+```typescript
+3回目 | fn{n:1,char:"the world world"}
+```
+
+このような最適化をサポートする言語は、自分で書き換えなくともコンパイラがfor/while相当の処理に変換してくれる。JavaScriptでも言語レベルのサポートが検討されES6に仕様が盛り込まれているが、2022/10時点でSafariにしか実装されていない。残念！
 
 再帰はなんでもかんでも最適化される訳ではなく、関数の一番最後で再帰する「末尾再帰」が対象になる。
 
@@ -181,13 +185,15 @@ function fn(n) {
 ```
 
 ```typescript
-// 最適化によって再帰を削除する
+// 最適化によって積まないようにする（末尾再帰の削除）
 1回目 | fn{n:3}
 ```
 
 ## TypeScriptの最適化
 
-本題に戻る。TypeScriptの型システムでは「Conditional Typesの末尾再帰の削除」が実装された。
+本題に戻る。\
+TypeScriptの型システムでは「Conditional Typesの末尾再帰の削除」が実装された。\
+これはJavaScriptのコードでなく型における最適化の話。
 
 ### 末尾再帰の削除
 
@@ -210,11 +216,11 @@ function trimLeft(str) {
 }
 
 // 空白の個数分、再帰する
-trimLeft("     foobar");
+trimLeft("     無駄無駄無駄無駄無駄");
 
 // 再帰が多すぎるとオーバーフロー（以前のバージョン）
 // RangeError: Maximum call stack size exceeded
-trimLeft("                                          foobar");
+trimLeft("                                          無駄無駄無駄無駄無駄");
 ```
 
 そこまで詳しくないので実際どうなっているのか分からないが、末尾再帰の削除によりfor/whileに該当するような処理が行われているのだろうと思う。
@@ -229,17 +235,17 @@ function trimLeft(str) {
 }
 
 // オーバーフローしない
-trimLeft("                                          foobar");
+trimLeft("                                          無駄無駄無駄無駄無駄");
 ```
 
 V4.5で導入された「末尾再帰の削除」によって、Conditional Typeのオーバーフローは発生しなくなった。
 
 ```typescript
 // 以前のバージョン: RangeError
-type X = TrimLeft("                                   foobar");
+type X = TrimLeft("                                   無駄無駄無駄無駄無駄");
 
 // V4.5: OK
-type X = TrimLeft("                                   foobar");
+type X = TrimLeft("                                   無駄無駄無駄無駄無駄");
 ```
 
 ### Union Typeは末尾再帰が削除されない
