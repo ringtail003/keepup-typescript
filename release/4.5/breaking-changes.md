@@ -71,11 +71,10 @@ tsconfig.jsonの「compilerOption」で宣言するべきオプションが「co
 ```
 
 {% hint style="danger" %}
-{% code overflow="wrap" %}
 ```
-Error: 'target' should be set inside the 'compilerOptions'object of the config json file
+Error: 'target' should be set inside the 'compilerOptions'
+object of the config json file
 ```
-{% endcode %}
 {% endhint %}
 {% endtab %}
 {% endtabs %}
