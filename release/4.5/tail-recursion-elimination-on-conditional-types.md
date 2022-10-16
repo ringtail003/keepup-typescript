@@ -1,8 +1,10 @@
 # Tail-Recursion Elimination on Conditional Types
 
+## TL;DR
+
 Conditional Typesの末尾再帰の削除が実装された。
 
-## TL;DR
+## ざっくり説明
 
 以前のバージョンでは型の再帰が深いとエラーになっていた。
 
@@ -17,7 +19,7 @@ type Test =
   TrimLeft<"                                                無駄無駄無駄無駄">;
 ```
 
-TS4.5で末尾再帰の最適化が導入されエラーは出なくなった。
+V4.5で末尾再帰の最適化が導入されエラーは出なくなった。
 
 ```typescript
 type TrimLeft<T extends string> =

@@ -1,5 +1,7 @@
 # The Awaited Type and Promise Improvements
 
+## TL;DR
+
 Promiseをアンラップするビルトインユーティリティタイプが追加された。
 
 ## Promiseの雑な説明

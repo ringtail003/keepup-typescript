@@ -1,5 +1,7 @@
 # module es2022
 
+## TL;DR
+
 コンパイラオプション `module`で `es2022` が指定できるようになった。メジャーな機能は「top-level await」。
 
 ## moduleとは何ぞ
@@ -51,9 +53,11 @@ exports.twoPi = constants_1.valueOfPi * 2;
 
 参考： [https://qiita.com/hareku/items/dbf0752aa76499a895fd](https://qiita.com/hareku/items/dbf0752aa76499a895fd)
 
+今回のアップデートで `module` に `es2022` が指定できるようになった。
+
 ## top-level awaitを使ってみる
 
-「TS Config」で `module:es2022` とする。
+`module:es2022` を設定するとtop-level awaitが使える。
 
 <figure><img src="../../.gitbook/assets/スクリーンショット 2022-10-10 23.29.49.png" alt=""><figcaption></figcaption></figure>
 

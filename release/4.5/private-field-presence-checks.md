@@ -1,5 +1,7 @@
 # Private Field Presence Checks
 
+## TL;DR
+
 ES2022で策定された「Ergonomic brand checks for Private Fields」をTypeScriptでサポート。
 
 ## Ergonomic brand checks for Private Fields
@@ -37,7 +39,7 @@ Dog.isDog(shiba);
 
 ## brand checks
 
-ブランドチェックを検証してみよう。Dogと全く同じフィールドを持つCatクラスを宣言する。
+検証してみよう。Dogと全く同じフィールドを持つCatクラスを宣言する。
 
 {% tabs %}
 {% tab title="Cat" %}
@@ -74,23 +76,23 @@ class Dog {
 {% endtabs %}
 
 ```typescript
-const norwegianForestCat = new Cat("しげる");
+const strayCat = new Cat("しげる");
 
 // true
-Cat.isCat(norwegianForestCat);
+Cat.isCat(strayCat);
 ```
 
 DogのしげるとCatのしげるは名前が同じでも、それぞれ別のクラスのインスタンスである。
 
 ```typescript
-// false
-Dog.isDog(norwegianForestCat);
+Dog.isDog(shiba); // true
+Dog.isDog(strayCat); // false
 
-// false
-Cat.isCat(shiba);
+Cat.isCat(shiba); // false
+Cat.isCat(strayCat); // true
 ```
 
-argにCatのインスタンスが渡された時、Cat#nameにアクセスできないのでfalseが返る。
+もう1回クラスのソースを見てみよう。
 
 ```typescript
 class Dog {
@@ -101,8 +103,10 @@ class Dog {
   }
 ```
 
-Dog#nameにアクセスできるのはDogだけ。\
-argにDogのインスタンスが渡された時、Dog#nameにアクセスできるのでtrueが返る。
+Dog#nameにアクセスできるのはDog（とそのインスタンス）だけ。
+
+CatインスタンスはDog#nameにアクセスできないのでfalseになる。\
+DogインスタンスであればDog#nameにアクセスできるのでtrueになる。
 
 クラスのブランドが担保できることから「ブランドチェック」と名付けられた。
 
@@ -112,10 +116,10 @@ TypeScriptには「type predicates」という型の同一性を検査する手�
 
 [https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates)
 
-この手法は「特定のプロパティを持つかどうか」を検査する。
+この手法は「特定のプロパティを持つかどうか」を検査するもの。
 
 ```typescript
-function isDog(arg: any): arg is Dog {
+function isDogPredicate(arg: any): arg is Dog {
   return (arg as Dog).name !== undefined;
 }
 ```
@@ -165,18 +169,17 @@ class Cat {
 別のインスタンスであってもプロパティを持っていれば同一とみなされる。
 
 ```typescript
-const norwegianForestCat = new Cat("しげる");
+const strayCat = new Cat("しげる");
 
 // true
-isDog(norwegianForestCat);
+isDogPredicate(strayCat);
 ```
 
 ブランドチェックはクラスが同じかどうか検査されるため、type predicatesと比較して優位性がある。
 
 ```typescript
-// type predicates: true
-isDog(norwegianForestCat);
+const strayCat = new Cat("しげる");
 
-// brand checks: false
-Dog.isDog(norwegianForestCat);
+// false
+Dog.isDog(strayCat);
 ```

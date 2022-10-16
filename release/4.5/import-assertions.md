@@ -1,6 +1,8 @@
 # Import Assertions
 
-インポートのシンタックス「assert」をサポートするようになった。
+## TL;DR
+
+インポートのシンタックス `assert` をサポートするようになった。
 
 ## JavaScriptのJSON読み込み
 
@@ -49,7 +51,7 @@ import users from "./users.json" assert { type: "jsooooooon" };
 ## typeはどう扱われるか
 
 `assert` 通りのコンテンツかどうかをチェックするのはブラウザなど実行環境の仕事。\
-違反がある場合、以下のようなエラーが出力されるらしい（未検証）。
+違反がある場合、以下のようなエラーが出力される。
 
 ```typescript
 // type:jsonかつ読み込んだコンテンツがJavaScriptだった時

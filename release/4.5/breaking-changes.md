@@ -1,5 +1,7 @@
 # Breaking Changes
 
+{% embed url="https://media.giphy.com/media/TfY3cjjH0aYopkybqc/giphy.gif" %}
+
 ## lib.d.ts Changes
 
 Promiseのメソッドの戻り値の型がAwaitedに変わった。

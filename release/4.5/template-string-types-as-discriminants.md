@@ -1,5 +1,7 @@
 # Template String Types as Discriminants
 
+## TL;DR
+
 ユニオン型の判別にテンプレートリテラルが使えるようになった。
 
 ## おさらい

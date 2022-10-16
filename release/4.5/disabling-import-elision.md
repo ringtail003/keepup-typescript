@@ -1,5 +1,7 @@
 # Disabling Import Elision
 
+## TL;DR
+
 コンパイラオプション `--preserveValueImports` が導入された。
 
 ## 未使用のインポート
@@ -66,7 +68,7 @@ ReferenceError: foo is not defined
 ```
 
 ```javascript
-// bar.js（トランスパイルによって出力されたJavaScript）
+// 出力されたJavaScript
 console.log(eval("foo"));
 export {};
 ```
@@ -82,7 +84,7 @@ export {};
 ```
 
 ```javascript
-// bar.js（トランスパイルによって出力されたJavaScript）
+// 出力されたJavaScript
 import { foo } from "./foo";
 console.log(eval("foo"));
 ```

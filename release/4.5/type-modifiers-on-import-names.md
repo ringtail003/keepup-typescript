@@ -1,10 +1,12 @@
----
-description: 型のインポート・エクスポートで新しいシンタックスが使えるようになった。
----
-
 # type Modifiers on Import Names
 
-TS3.8で導入された「Type-Only Imports and Export」で型のみインポート・エクスポートできるようになった。
+## TL;DR
+
+型のインポート・エクスポートで新しいシンタックス `import { type Foo }` が使えるようになった。
+
+## Type-Only Imports and Export（V3.8）
+
+「Type-Only Imports and Export」というシンタックスを使うと、型のみインポート・エクスポートできる。
 
 [https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#type-only-imports-and-export)
 
@@ -29,7 +31,7 @@ const user: User = {
 };
 ```
 
-型と値の両方をインポートするには、それぞれ別に `import` する必要があった。
+型と値の両方をインポートする場合、それぞれ別に `import` する必要がある。
 
 ```typescript
 import type { User } from "./user"; // <=== 型のインポート
@@ -42,7 +44,7 @@ const user: User = {
 isUser(user);
 ```
 
-TS4.5で新しいシンタックスが導入され、1回の `import` で済むようになった。
+今回のアップデートで新しいシンタックスが導入され、1回の `import` で済むようになった。
 
 ```typescript
 // 以前のバージョン
@@ -51,6 +53,6 @@ import { isUser } from "./user";
 ```
 
 ```typescript
-// TS4.5
+// V4.5
 import { type User, isUser } from "./user";
 ```
