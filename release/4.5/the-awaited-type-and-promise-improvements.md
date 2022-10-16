@@ -7,11 +7,10 @@ Promiseをアンラップするビルトインユーティリティタイプが�
 JavaScriptの `fetch` を例に説明する。この関数はAPIリクエストを実行する。
 
 ```javascript
-// リクエストが完了するのは、1秒後かもしれないし10秒後かもしれない。
 fetch("https://my-domain/users/102");
 ```
 
-`fetch()` の戻り値は `Promise` というオブジェクトである。
+リクエストが完了するのは、1秒後かもしれないし10秒後かもしれない。このような非同期処理を扱うため `fetch()` の戻り値は `Promise` というオブジェクトになっている。
 
 ```javascript
 fetch("https://...");
@@ -20,14 +19,17 @@ fetch("https://...");
 //   then: () => {}
 //   catch: () => {}
 // }
-```
 
-`Promise` オブジェクトのメソッドを使うと、コールバックを実行できる。
-
-```javascript
-fetch("https://...").then((user) => {
-  console.log(user.id);
-});
+fetch("https://...")
+  // リクエストが正常終了した時の処理
+  .then(() => {
+    console.log("レロレロ レロレロ レロレロレロ");
+  })
+  // リクエストが失敗した時の処理
+  .catch(() => {
+    console.log("『てめーはおれを怒らせた』");
+  })
+;
 ```
 
 TypeScriptは `Promise` オブジェクトの型情報を持っている。
@@ -56,16 +58,48 @@ fetchUser().then(user => {
 });
 ```
 
-では、`fetchUser` の返す「値」を「型」として定義したい時はどうするか？これが追加された機能の本題になる。
+では、`fetchUser` の返す値を「型」として定義したい時はどうするか。\
+愚直にやるならレスポンスをインターフェースにすれば良い。
 
 ```typescript
 async function fetchUser() {
-    return { id: 1 };
+  return { id: 1 };
 }
-type FetchUserType = Promise<{ id: 1 }>;
-
-// { id:1 } をうまいこと型定義できないか？？
+type FetchUserType = Promise<{ id: number }>;
 ```
+
+ただしこの方法は、エンドポイントごとに同じような型を定義するわずらわしさがある。
+
+```typescript
+type FetchUserType = Promise<{ id: number }>;
+type FetchUserProfileType = Promise<{ id: number; age: number; }>;
+type FetchUserHistoryType = Promise<{ id: number; lastLoggedIn: date; }>;
+...
+```
+
+さらにリクエストを扱う関数など、型の扱いがやっかいになる。
+
+{% code overflow="wrap" %}
+```typescript
+// 全部型を列挙するか？
+async function fn(fetch: 
+  FetchUserType | FetchUserProfileType | FetchUserHistoryType
+) {
+  return {
+    data: await fetch(),
+    requestedAt: new Date(),
+  };
+}
+
+// anyで許容するか？
+async function fn2(fetch: Promise<any>) {
+  return {
+    data: await fetch(),
+    requestedAt: new Date(),
+  };
+}
+```
+{% endcode %}
 
 ## Promiseから値の型を導出（従来）
 
@@ -73,7 +107,7 @@ type FetchUserType = Promise<{ id: 1 }>;
 
 ```typescript
 async function fetchUser() {
-    return { id: 1 };
+  return { id: 1 };
 }
 
 // (1)fetchUser関数の戻り値を型定義する
@@ -89,11 +123,12 @@ type XXX = UnWrapped<FetchUserReturnType>;
 
 ## Pormiseから値の型を導出（新）
 
-**Awaited** というビルトインの型が追加された。`infer` を使った導出は `Awaited` に置き換えることができる。
+**Awaited** というビルトインの型が追加された。このビルトイン型が今回追加された機能。\
+`infer` を使った導出は `Awaited` に置き換えることができる。
 
 ```typescript
 async function fetchUser() {
-    return { id: 1 };
+  return { id: 1 };
 }
 
 // (1)fetchUser関数の戻り値を型定義する
@@ -106,7 +141,7 @@ type XXX = Awaited<FetchUserReturnType>;
 
 ## Awaitedの優れた点：ネストに対応
 
-Promiseのネストを表現してみる。もうちょっとマシなサンプルを書きたかったけど初見殺しなコードしか書けなかった...。
+Promiseのネストを表現してみる。
 
 ```typescript
 function promisefy<T>(value: T): Promise<T> {
@@ -115,13 +150,12 @@ function promisefy<T>(value: T): Promise<T> {
 
 const promise = promisefy(promisefy(promisefy(100)));
 // promise:Promise<Promise<Promise<number>>>
-
-// ここから「number」を取り出すには？
 ```
 
+Promiseの内包するnumberを取り出すにはどうしたらいいだろうか？\
 前述の `infer` を使った導出はネストに対応していない。
 
-{% code title="前述の導出を使う" %}
+{% code title="inferを使った導出" %}
 ```typescript
 type UnWrapped<T> = T extends Promise<infer R> ? R : T;
 
@@ -139,7 +173,9 @@ type YYY = UnWrapped<UnWrapped<UnWrapped<typeof promise>>>;
 
 {% code title="開発者ががんばる" overflow="wrap" %}
 ```typescript
-type UnWrapped<T> = T extends Promise<infer R> ? R extends Promise<any> ? UnWrapped<R> : R : T;
+type UnWrapped<T> = T extends Promise<infer R> 
+  ? R extends Promise<any> ? UnWrapped<R> : R 
+  : T;
 
 type XXX = UnWrapped<typeof promise>;
 // number
@@ -147,7 +183,7 @@ type XXX = UnWrapped<typeof promise>;
 ```
 {% endcode %}
 
-:tada: `Awaited` を使うと、いとも簡単に値を導出できる。
+`Awaited` を使うと簡単に値を導出できる。
 
 ```typescript
 type XXX = Awaited<typeof promise>;
