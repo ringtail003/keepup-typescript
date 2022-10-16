@@ -165,7 +165,7 @@ type XXX = UnWrapped<typeof promise>;
 
 type YYY = UnWrapped<UnWrapped<UnWrapped<typeof promise>>>;
 // number
-// うーん...導出できたけど...微妙
+// ネストの数に依存している
 ```
 {% endcode %}
 
