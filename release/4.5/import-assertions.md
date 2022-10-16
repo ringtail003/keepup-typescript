@@ -48,19 +48,25 @@ TypeScriptはtypeに関与しないので、間違った指定でも通る。
 import users from "./users.json" assert { type: "jsooooooon" };
 ```
 
-## typeはどう扱われるか
+## ECMAScriptでの扱い
 
 `assert` 通りのコンテンツかどうかをチェックするのはブラウザなど実行環境の仕事。\
 違反がある場合、以下のようなエラーが出力される。
 
+{% code overflow="wrap" %}
 ```typescript
-// type:jsonかつ読み込んだコンテンツがJavaScriptだった時
-Failed to load module script: Expected a JSON module script but the server responded 
-with a MIME type of "application/javascript".
-```
+// import *** from "***" assert { type: "json" }
+// レスポンス：JavaScript
 
-```typescript
-// type指定がなく読み込んだコンテンツがJSONだった時
-Failed to load module script: Expected a JavaScript module script 
-but the server responded with a MIME type of "application/json".
+Failed to load module script: Expected a JSON module script but the server responded with a MIME type of "application/javascript".
 ```
+{% endcode %}
+
+{% code overflow="wrap" %}
+```typescript
+// import *** from "***"
+// レスポンス：JSON
+
+Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "application/json".
+```
+{% endcode %}
