@@ -112,6 +112,7 @@ const foo: Foo = {};
 
 上のコードを `isolatedModules:true` にして `tsc` に渡すとエラーが発生する。
 
+{% code overflow="wrap" %}
 ```bash
 ./node_modules/.bin/tsc ./bar.ts \
   --module es2022 \
@@ -121,6 +122,7 @@ const foo: Foo = {};
 error TS1444: 
 'Foo' is a type and must be imported usng a type-only import when 'preserveValueImports' and 'isolatedModules' are both enabled.
 ```
+{% endcode %}
 
 このエラーは「単一ファイルに出力すると型情報が消えてしまう」ことを警告している。
 
