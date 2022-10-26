@@ -1,12 +1,6 @@
 # About
 
-TypeScriptのアップデート内容を理解するための自分用まとめです。Angularで開発することが多いのでサンプルコードはほとんどがAngularです。
-
-{% embed url="https://angular.jp/" %}
-
-## Release Notes
-
-{% embed url="https://www.typescriptlang.org/docs/handbook/release-notes/overview.html" %}
+TypeScriptのアップデートを理解し、社内勉強会で展開するためのまとめです。Angular視点でどう影響するかを捉えていきます。
 
 ## Angular & TypeScript
 
