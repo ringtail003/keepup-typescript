@@ -4,4 +4,8 @@ TypeScriptのアップデートを理解し、社内勉強会で展開するた�
 
 ## Angular & TypeScript
 
-<table><thead><tr><th>TypeScript</th><th>Angular</th><th data-type="content-ref"></th></tr></thead><tbody><tr><td>v4.9</td><td>v15</td><td><a href="https://github.com/angular/angular/blob/15.2.0-next.4/package.json">https://github.com/angular/angular/blob/15.2.0-next.4/package.json</a></td></tr><tr><td>v4.8</td><td>v15</td><td></td></tr><tr><td>v4.7</td><td>v14</td><td><a href="https://github.com/angular/angular/blob/14.0.7/package.json">https://github.com/angular/angular/blob/14.0.7/package.json</a></td></tr><tr><td>v4.6</td><td>v13</td><td><a href="https://github.com/angular/angular/blob/13.3.12/package.json">https://github.com/angular/angular/blob/13.3.12/package.json</a></td></tr></tbody></table>
+| TypeScript | Angular |
+| ---------- | ------- |
+| v4.8       | v15     |
+| v4.8       | v14.2   |
+| v4.6       | v13.3   |
