@@ -4,13 +4,12 @@
 
 クラスのコンストラクタで最初に `super()` を呼ばないといけない縛りがなくなった。
 
-## 以前のバージョン
+## Previously
+
+最初に `super()` を呼ばなければいけない。
 
 {% code overflow="wrap" %}
 ```typescript
-class Foo {}
-declare function doSomething(): void;
-
 class Bar extends Foo {
   prop = true;
 
@@ -25,10 +24,9 @@ class Bar extends Foo {
 
 ## v4.6+
 
-```typescript
-class Foo {}
-declare function doSomething(): void;
+縛りはない。
 
+```typescript
 class Bar extends Foo {
   prop = true;
 
