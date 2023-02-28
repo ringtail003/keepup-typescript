@@ -31,7 +31,7 @@ if (response.statusCode === 400) {
 ```
 {% endcode %}
 
-## Previously
+## Previous
 
 分割代入を組み合わせると、ユニオンが判別できなくなっていた。
 
@@ -46,7 +46,7 @@ if (statusCode === 400) {
 }
 ```
 
-## v4.6+
+## Current
 
 ユニオンの判別ができる。
 

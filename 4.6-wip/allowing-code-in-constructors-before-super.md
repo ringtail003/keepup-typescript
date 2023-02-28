@@ -4,7 +4,7 @@
 
 クラスのコンストラクタで最初に `super()` を呼ばないといけない縛りがなくなった。
 
-## Previously
+## Previous
 
 最初に `super()` を呼ばなければいけない。
 
@@ -22,7 +22,7 @@ class Bar extends Foo {
 ```
 {% endcode %}
 
-## v4.6+
+## Current
 
 縛りはない。
 

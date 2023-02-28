@@ -26,3 +26,4 @@
 * [4.6 wip](4.6-wip/README.md)
   * [Allowing Code in Constructors Before super()](4.6-wip/allowing-code-in-constructors-before-super.md)
   * [Control Flow Analysis for Destructured Discriminated Unions](4.6-wip/control-flow-analysis-for-destructured-discriminated-unions.md)
+  * [Improved Recursion Depth Checks](4.6-wip/improved-recursion-depth-checks.md)
