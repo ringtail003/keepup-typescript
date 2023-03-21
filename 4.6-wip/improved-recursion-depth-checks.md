@@ -6,53 +6,50 @@
 
 ## 前提
 
-ジェネリクスを持ったインターフェースで考える。
+ジェネリクスは、後から決定する型をプレースホルダのように扱える。
 
 ```typescript
 interface Foo<T> {
   prop: T;
 }
 
-declare x: Foo<string>;
-// x ==> { prop: string }
-
-declare y: Foo<number>;
-// y ==> { prop: number }
+let x1: Foo<string>; // x1: { prop: string }
+let x2: Foo<number>; // x2: { prop: number }
 ```
 
-Tの型が一致すれば互換性がある。
+ネストした型も扱うことができる。
 
 ```typescript
-// ✅ 代入できる
-let x1: Foo<string> = { prop: "" };
-let y1: Foo<string> = { prop: "" };
-x1 = y1;
-
-// ❌ 代入できない
-let x2: Foo<string> = { prop: "" };
-let y2: Foo<number> = { prop: 0 };
-x2 = y2; // ==> ERROR
+let x3: Foo<Foo<string>>; // x3: { prop: { prop: string } }
 ```
 
-ジェネリクスがネストしている場合も同じ、Tの型が一致すれば互換性がある。
+ネストが深すぎるとコンパイル時にパフォーマンスの問題が発生する。
 
 ```typescript
-// ✅ 代入できる
-let x4: Foo<Foo<string>> = { prop: { prop: "" } };
-let y4: Foo<Foo<string>> = { prop: { prop: "" } };
-x4 = y4;
+declare const x: Foo<Foo<Foo<Foo<Foo<string>>>>>;
+declare const y: Foo<Foo<Foo<Foo<Foo<Foo<string>>>>>>;
 
-// ❌ 代入できない
-let x1: Foo<Foo<string>> = { prop: { prop: "" } };
-let y1: Foo<Foo<number>> = { prop: { prop: 0 } };
-x1 = y1; // ==> ERROR
+// パッと見てネストの深さが違うため「互換性がない」ことが分かるが、機械的なチェックではネストを遡って検査する
+```
+
+## Previous
+
+深くネストしている場合、型の互換性の推論が不完全だった。
+
+```typescript
+declare const x: Foo<Foo<Foo<Foo<Foo<string>>>>>;
+declare const y: Foo<Foo<Foo<Foo<Foo<Foo<string>>>>>>;
+
+x = y; // ❓ 互換性はないのに、エラーにならない
 ```
 
 ## Current
 
-深いネストの型チェックの方法が見直され、スピードが改善した。
+型チェックが見直され、推論が正しく行われるようになりパフォーマンスが改善した。
 
 ```typescript
-let x: Foo<Foo<Foo<Foo<Foo<Foo<string>>>>>>;
-let y: Foo<Foo<Foo<Foo<Foo<string>>>>>;
+declare const x: Foo<Foo<Foo<Foo<Foo<string>>>>>;
+declare const y: Foo<Foo<Foo<Foo<Foo<Foo<string>>>>>>;
+
+x = y; // エラーが発生する
 ```
