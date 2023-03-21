@@ -12,45 +12,47 @@
 interface Foo<T> {
   prop: T;
 }
+
+declare x: Foo<string>;
+// x ==> { prop: string }
+
+declare y: Foo<number>;
+// y ==> { prop: number }
 ```
 
 Tの型が一致すれば互換性がある。
 
 ```typescript
-// OK
+// ✅ 代入できる
 let x1: Foo<string> = { prop: "" };
 let y1: Foo<string> = { prop: "" };
 x1 = y1;
 
-// ERROR
+// ❌ 代入できない
 let x2: Foo<string> = { prop: "" };
 let y2: Foo<number> = { prop: 0 };
-x2 = y2;
+x2 = y2; // ==> ERROR
 ```
 
 ジェネリクスがネストしている場合も同じ、Tの型が一致すれば互換性がある。
 
 ```typescript
-// OK
+// ✅ 代入できる
 let x4: Foo<Foo<string>> = { prop: { prop: "" } };
 let y4: Foo<Foo<string>> = { prop: { prop: "" } };
 x4 = y4;
 
-// ERROR
+// ❌ 代入できない
 let x1: Foo<Foo<string>> = { prop: { prop: "" } };
 let y1: Foo<Foo<number>> = { prop: { prop: 0 } };
-x1 = y1;
+x1 = y1; // ==> ERROR
 ```
 
-## 変更点
+## Current
 
 深いネストの型チェックの方法が見直され、スピードが改善した。
 
 ```typescript
 let x: Foo<Foo<Foo<Foo<Foo<Foo<string>>>>>>;
 let y: Foo<Foo<Foo<Foo<Foo<string>>>>>;
-
-// ERROR
-// エラーになること自体は以前のバージョンと4.6どちらでも変わらない
-x = y;
 ```
