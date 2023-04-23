@@ -75,7 +75,7 @@ type LogFormat<P extends keyof LogOperation> = {
 
 ## Previous
 
-クロージャの中の型推論が弱かった。
+クロージャのパラメータの型推論が弱かった。
 
 ```typescript
 writeLog({
@@ -89,6 +89,8 @@ writeLog({
 ```
 
 ## Current
+
+クロージャのパラメータが正しく推論されるようになった。
 
 ```typescript
 writeLog({
