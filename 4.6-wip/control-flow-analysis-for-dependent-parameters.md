@@ -43,3 +43,66 @@ const t2: Tuple = ['a', true, 1];
 ```typescript
 declare const search: (params: { id: number } | { name: string }) => void;
 ```
+
+## 解いてみる
+
+愚直に実装したケース：
+
+```typescript
+const fn1 = (kind: string, query: string | number) => {
+  // 🤔 うっかりタイポしても気づけない
+  if (kind === 'idddd') {}
+
+  // 🤔 型の不一致
+  if (kind === 'name') {
+    search({ name: query }); // ❌ ERROR! string|number型をstringに渡そうとしている
+  }
+}
+```
+
+タグ付きユニオンで実装したケース：
+
+```typescript
+const fn2 = (obj: { kind: 'id', query: number } | { kind: 'name', query: string }) => {
+  // 👍 タイポや型の不一致でコンパイルエラーが得られ、型安全になる
+  if (obj.kind === 'idddd') { // ❌ ERROR! 
+    search({ id: obj.query });
+  }
+
+  if (obj.kind === 'name') {
+    search({ name: obj.query });
+  }
+}
+
+// 🤔 引数をオブジェクトで受け取らないといけない、場合によっては冗長
+```
+
+タプルで実装したケース：
+
+```typescript
+type F3 = (...args: ['id', number] | ['name', string]) => void;
+
+// 👍 引数がオブジェクトに縛られない
+const fn3: F3 = (kind, query) => {
+  if (kind === 'id') {
+    search({ id: query });
+  }
+
+  if (kind === 'name') {
+    search({ name: query });
+  }
+};
+
+fn3('id', 123);
+fn3('name', '山田');
+```
+
+自分で実装する分にはタグ付きユニオンを使うケースが多いかもしれない。\
+サードパーティのライブラリとの中継型としてユースケースが考えられる。
+
+```typescript
+import { fn } from 'vendor';
+
+// wip
+fn('id', 123);
+```
