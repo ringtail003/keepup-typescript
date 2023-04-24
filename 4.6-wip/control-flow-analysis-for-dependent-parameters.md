@@ -92,12 +92,21 @@ const fn3: F3 = (kind, query) => {
 };
 ```
 
-自分で実装する分にはタグ付きユニオンを使うケースが多いかもしれない。\
-サードパーティのライブラリとの中継型としてユースケースが考えられる。
+ユースケースとして、引数のためにオブジェクトを拡張したくない場合に使えるかもしれない。
 
 ```typescript
-import { fn } from 'vendor';
+type ApiRequest = <T>(...args: ['get', number] | ['put', number, T]) => void;
 
-// wip
-fn('id', 123);
+const request: ApiRequest = (method, id, ...body) => {
+  if (method === 'get') {
+    fetch(`/users/${id}`);
+  }
+  if (method === 'put') {
+    fetch(`/users/${id}`, { body: JSON.stringify(body) });
+  }
+};
+
+request('get', 1);
+request('put', 1, { name: 'Taro' });
+
 ```
