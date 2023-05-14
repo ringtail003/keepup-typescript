@@ -4,7 +4,7 @@
 
 分割代入＆スプレッド構文を使った推論が修正された。
 
-## Before
+## Previous
 
 {% code title="foo.ts" %}
 ```typescript
@@ -39,7 +39,7 @@ foo(new Thing());
 ```
 {% endcode %}
 
-## After
+## Current
 
 TSでエラーが表示されるようになった。
 

@@ -28,11 +28,11 @@ JavaScriptをトランスパイル対象にするために以下のオプショ�
 ```
 {% endcode %}
 
-## Before
+## Previous
 
 エラーなし。
 
-## After
+## Current
 
 ```javascript
 /**

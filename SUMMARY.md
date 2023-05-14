@@ -35,3 +35,4 @@
   * [More Syntax and Binding Errors in JavaScript](4.6-wip/more-syntax-and-binding-errors-in-javascript.md)
   * [TypeScript Trace Analyzer](4.6-wip/typescript-trace-analyzer.md)
   * [BREAKING CHANGE:Object Rests Drop Unspreadable Members from Generic Objects](4.6-wip/breaking-change-object-rests-drop-unspreadable-members-from-generic-objects.md)
+  * [BREAKING CHANGE:JavaScript Files Always Receive Grammar and Binding Errors](4.6-wip/breaking-change-javascript-files-always-receive-grammar-and-binding-errors.md)
