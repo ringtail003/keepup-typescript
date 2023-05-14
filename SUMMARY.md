@@ -4,6 +4,19 @@
 
 ## Release
 
+* [4.6](release/4.6/README.md)
+  * [Allowing Code in Constructors Before super()](release/4.6/allowing-code-in-constructors-before-super.md)
+  * [Control Flow Analysis for Destructured Discriminated Unions](release/4.6/control-flow-analysis-for-destructured-discriminated-unions.md)
+  * [Improved Recursion Depth Checks](release/4.6/improved-recursion-depth-checks.md)
+  * [Indexed Access Inference Improvements](release/4.6/indexed-access-inference-improvements.md)
+  * [Control Flow Analysis for Dependent Parameters](release/4.6/control-flow-analysis-for-dependent-parameters.md)
+  * [--target es2022](release/4.6/target-es2022.md)
+  * [Removed Unnecessary Arguments in react-jsx](release/4.6/removed-unnecessary-arguments-in-react-jsx.md)
+  * [JSDoc Name Suggestions](release/4.6/jsdoc-name-suggestions.md)
+  * [More Syntax and Binding Errors in JavaScript](release/4.6/more-syntax-and-binding-errors-in-javascript.md)
+  * [TypeScript Trace Analyzer](release/4.6/typescript-trace-analyzer.md)
+  * [BREAKING CHANGE:Object Rests Drop Unspreadable Members from Generic Objects](release/4.6/breaking-change-object-rests-drop-unspreadable-members-from-generic-objects.md)
+  * [BREAKING CHANGE:JavaScript Files Always Receive Grammar and Binding Errors](release/4.6/breaking-change-javascript-files-always-receive-grammar-and-binding-errors.md)
 * [4.5](release/4.5/README.md)
   * [Supporting lib from node\_modules](release/4.5/supporting-lib-from-node\_modules.md)
   * [The Awaited Type and Promise Improvements](release/4.5/the-awaited-type-and-promise-improvements.md)
@@ -20,19 +33,3 @@
   * [Breaking Changes](release/4.5/breaking-changes.md)
 * [4.4](release/4.4.md)
 * [4.3](release/4.3.md)
-
-***
-
-* [4.6 wip](4.6-wip/README.md)
-  * [Allowing Code in Constructors Before super()](4.6-wip/allowing-code-in-constructors-before-super.md)
-  * [Control Flow Analysis for Destructured Discriminated Unions](4.6-wip/control-flow-analysis-for-destructured-discriminated-unions.md)
-  * [Improved Recursion Depth Checks](4.6-wip/improved-recursion-depth-checks.md)
-  * [Indexed Access Inference Improvements](4.6-wip/indexed-access-inference-improvements.md)
-  * [Control Flow Analysis for Dependent Parameters](4.6-wip/control-flow-analysis-for-dependent-parameters.md)
-  * [--target es2022](4.6-wip/target-es2022.md)
-  * [Removed Unnecessary Arguments in react-jsx](4.6-wip/removed-unnecessary-arguments-in-react-jsx.md)
-  * [JSDoc Name Suggestions](4.6-wip/jsdoc-name-suggestions.md)
-  * [More Syntax and Binding Errors in JavaScript](4.6-wip/more-syntax-and-binding-errors-in-javascript.md)
-  * [TypeScript Trace Analyzer](4.6-wip/typescript-trace-analyzer.md)
-  * [BREAKING CHANGE:Object Rests Drop Unspreadable Members from Generic Objects](4.6-wip/breaking-change-object-rests-drop-unspreadable-members-from-generic-objects.md)
-  * [BREAKING CHANGE:JavaScript Files Always Receive Grammar and Binding Errors](4.6-wip/breaking-change-javascript-files-always-receive-grammar-and-binding-errors.md)

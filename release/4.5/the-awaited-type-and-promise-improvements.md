@@ -84,7 +84,7 @@ type FetchUserHistoryType = Promise<{ id: number; lastLoggedIn: date; }>;
 {% code overflow="wrap" %}
 ```typescript
 // 全部型を列挙するか？
-async function fn(fetch: 
+async function fn(fetch: () =>
   FetchUserType | FetchUserProfileType | FetchUserHistoryType
 ) {
   return {
@@ -94,7 +94,7 @@ async function fn(fetch:
 }
 
 // anyで許容するか？
-async function fn2(fetch: Promise<any>) {
+async function fn2(fetch: () => Promise<any>) {
   return {
     data: await fetch(),
     requestedAt: new Date(),
