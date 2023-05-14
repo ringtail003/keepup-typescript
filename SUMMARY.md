@@ -33,3 +33,5 @@
   * [Removed Unnecessary Arguments in react-jsx](4.6-wip/removed-unnecessary-arguments-in-react-jsx.md)
   * [JSDoc Name Suggestions](4.6-wip/jsdoc-name-suggestions.md)
   * [More Syntax and Binding Errors in JavaScript](4.6-wip/more-syntax-and-binding-errors-in-javascript.md)
+  * [TypeScript Trace Analyzer](4.6-wip/typescript-trace-analyzer.md)
+  * [BREAKING CHANGE:Object Rests Drop Unspreadable Members from Generic Objects](4.6-wip/breaking-change-object-rests-drop-unspreadable-members-from-generic-objects.md)
