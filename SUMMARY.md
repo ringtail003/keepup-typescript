@@ -32,3 +32,4 @@
   * [--target es2022](4.6-wip/target-es2022.md)
   * [Removed Unnecessary Arguments in react-jsx](4.6-wip/removed-unnecessary-arguments-in-react-jsx.md)
   * [JSDoc Name Suggestions](4.6-wip/jsdoc-name-suggestions.md)
+  * [More Syntax and Binding Errors in JavaScript](4.6-wip/more-syntax-and-binding-errors-in-javascript.md)
