@@ -30,3 +30,5 @@
   * [Indexed Access Inference Improvements](4.6-wip/indexed-access-inference-improvements.md)
   * [Control Flow Analysis for Dependent Parameters](4.6-wip/control-flow-analysis-for-dependent-parameters.md)
   * [--target es2022](4.6-wip/target-es2022.md)
+  * [Removed Unnecessary Arguments in react-jsx](4.6-wip/removed-unnecessary-arguments-in-react-jsx.md)
+  * [JSDoc Name Suggestions](4.6-wip/jsdoc-name-suggestions.md)
