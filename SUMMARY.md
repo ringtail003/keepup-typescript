@@ -29,3 +29,4 @@
   * [Improved Recursion Depth Checks](4.6-wip/improved-recursion-depth-checks.md)
   * [Indexed Access Inference Improvements](4.6-wip/indexed-access-inference-improvements.md)
   * [Control Flow Analysis for Dependent Parameters](4.6-wip/control-flow-analysis-for-dependent-parameters.md)
+  * [--target es2022](4.6-wip/target-es2022.md)
