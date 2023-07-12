@@ -4,6 +4,8 @@
 
 ## Release
 
+* [4.7](release/4.7/README.md)
+  * [ECMAScript Module Support in Node.js](release/4.7/ecmascript-module-support-in-node.js.md)
 * [4.6](release/4.6/README.md)
   * [Allowing Code in Constructors Before super()](release/4.6/allowing-code-in-constructors-before-super.md)
   * [Control Flow Analysis for Destructured Discriminated Unions](release/4.6/control-flow-analysis-for-destructured-discriminated-unions.md)
