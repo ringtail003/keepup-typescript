@@ -10,6 +10,7 @@
   * [Improved Function Inference in Objects and Methods](release/4.7/improved-function-inference-in-objects-and-methods.md)
   * [Instantiation Expressions](release/4.7/instantiation-expressions.md)
   * [extends Constraints on infer Type Variables](release/4.7/extends-constraints-on-infer-type-variables.md)
+  * [Optional Variance Annotations for Type Parameters](release/4.7/optional-variance-annotations-for-type-parameters.md)
 * [4.6](release/4.6/README.md)
   * [Allowing Code in Constructors Before super()](release/4.6/allowing-code-in-constructors-before-super.md)
   * [Control Flow Analysis for Destructured Discriminated Unions](release/4.6/control-flow-analysis-for-destructured-discriminated-unions.md)
