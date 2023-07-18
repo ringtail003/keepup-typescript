@@ -17,7 +17,7 @@ declare function f<T>(arg: {
 
 f({
     produce() { return "hello" },
-    consume: x => x.toLowerCase(), // ❌ ERROR 
+    consume: x => x.toLowerCase(), // ❌ ERROR
 });
 ```
 
