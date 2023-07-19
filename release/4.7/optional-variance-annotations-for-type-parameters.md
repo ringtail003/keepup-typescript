@@ -41,9 +41,13 @@ type Consumer2<in T> = (x: T) => T; // ❌ ERROR T型をリターンすること
 型そのもの＋サブタイプを許容する。
 
 ```typescript
-type Provider<out T> = () => T;
+class A { a() {} }
+class B extends A { b() {} }
+class C extends B { c() {} }
 
+type Provider<out T> = () => T;
 const provide:Provider<B> = () => new B();
+
 const p1:A = provide(); // Aに対してB（サブタイプ）を代入する
 const p2:B = provide(); // Bに対してB（型そのもの）を代入する
 const p3:C = provide(); // Cに対してB（スーパータイプ）を代入する ❌ ERROR
@@ -55,9 +59,13 @@ const p3:C = provide(); // Cに対してB（スーパータイプ）を代入す
 型そのもの＋スーパータイプを許容する。
 
 ```typescript
-type Consumer<in T> = (x: T) => void;
+class A { a() {} }
+class B extends A { b() {} }
+class C extends B { c() {} }
 
+type Consumer<in T> = (x: T) => void;
 const consume:Consumer<B> = (x:B) => void 0;
+
 consume(new A()); // AをB（サブタイプ）として使用する ❌ ERROR
 consume(new B()); // BをB（型そのもの）として使用する
 consume(new C()); // CをB（スーパータイプ）として使用する
@@ -69,9 +77,13 @@ consume(new C()); // CをB（スーパータイプ）として使用する
 型そのものを許容する。
 
 ```typescript
-type Processor<in out T> = (x: T) => T;
+class A { a() {} }
+class B extends A { b() {} }
+class C extends B { c() {} }
 
+type Processor<in out T> = (x: T) => T;
 const process:Processor<B> = (x:B) => new B();
+
 const pr1:A = process(new A()); // ❌ ERROR（パラメータ）
 const pr2:B = process(new B());
 const pr3:C = process(new C()); // ❌ ERROR（代入）
@@ -85,17 +97,27 @@ const pr3:C = process(new C()); // ❌ ERROR（代入）
 <pre class="language-typescript"><code class="lang-typescript"><strong>// tsconfig.json
 </strong><strong>strictFunctionChecks: true  
 </strong>
-type TakeB = (arg: T) => void;
-const t1: TakeB&#x3C;B> = (arg: A) => {};
-const t2: TakeB&#x3C;B> = (arg: B) => {};
-const t3: TakeB&#x3C;B> = (arg: C) => {}; ❌ ERROR
+class A { a() {} }
+class B extends A { b() {} }
+class C extends B { c() {} }
+
+type TakeB = (arg: B) => void;
+
+const t1: TakeB = (arg: A) => {};
+const t2: TakeB = (arg: B) => {};
+const t3: TakeB = (arg: C) => {}; // ❌ ERROR
 </code></pre>
 
 <pre class="language-typescript"><code class="lang-typescript"><strong>// tsconfig.json
 </strong><strong>strictFunctionChecks: false
 </strong>
-type TakeB = (arg: T) => void;
-const t1: TakeB&#x3C;B> = (arg: A) => {};
-const t2: TakeB&#x3C;B> = (arg: B) => {};
-const t3: TakeB&#x3C;B> = (arg: C) => {};
+class A { a() {} }
+class B extends A { b() {} }
+class C extends B { c() {} }
+
+type TakeB = (arg: B) => void;
+
+const t1: TakeB = (arg: A) => {};
+const t2: TakeB = (arg: B) => {};
+const t3: TakeB = (arg: C) => {};
 </code></pre>
