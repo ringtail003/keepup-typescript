@@ -7,7 +7,7 @@
 ## 書き方
 
 `in` または `out` を使って変性を注釈する。\
-開発者が型を読み解くヒントとなるものであって、in/outの指定で挙動が変わるものではない。
+開発者が型を読み解くヒントとなるものであって、指定によって挙動が変わるものではない。
 
 ```typescript
 type Provider<out T> = () => T;
@@ -31,13 +31,14 @@ type Provider<out T> = () => T;
 注釈と型宣言が一致しない場合、エラーが得られる。
 
 ```typescript
-type Provider2<out T> = (x: T) => T; // ❌ ERROR
-type Consumer2<in T> = (x: T) => T; // ❌ ERROR
+type Provider2<out T> = (x: T) => T; // ❌ ERROR T型をパラメータに取ることが宣言されていない
+type Consumer2<in T> = (x: T) => T; // ❌ ERROR T型をリターンすることが宣言されていない
 ```
 
-## 共変と反変
+## 共変
 
-`out` で注釈できる「T型のリターン」は共変の性質を持つ。
+`out` で注釈した「T型のリターン」は**共変**の性質を持つ。\
+型そのもの＋サブタイプを許容する。
 
 ```typescript
 type Provider<out T> = () => T;
@@ -48,7 +49,10 @@ const p2:B = provide(); // Bに対してB（型そのもの）を代入する
 const p3:C = provide(); // Cに対してB（スーパータイプ）を代入する ❌ ERROR
 ```
 
-`in` で注釈できる「T型のパラメータ」は反変の性質を持つ。
+## 反変
+
+`in` で注釈した「T型のパラメータ」は**反変**の性質を持つ。\
+型そのもの＋スーパータイプを許容する。
 
 ```typescript
 type Consumer<in T> = (x: T) => void;
@@ -59,4 +63,39 @@ consume(new B()); // BをB（型そのもの）として使用する
 consume(new C()); // CをB（スーパータイプ）として使用する
 ```
 
-これらは言語仕様なので `out` `in` で補足しなくても、その性質は変わらない。
+## 不変
+
+`in out` で注釈した「T型のパラメータ」「T型のリターン」は相互作用で**不変**の性質を持つ。\
+型そのものを許容する。
+
+```typescript
+type Processor<in out T> = (x: T) => T;
+
+const process:Processor<B> = (x:B) => new B();
+const pr1:A = process(new A()); // ❌ ERROR（パラメータ）
+const pr2:B = process(new B());
+const pr3:C = process(new C()); // ❌ ERROR（代入）
+```
+
+## 双変
+
+関数パラメータの共変は `strictFunctionChecks:false` にすると**双変**の性質に変わる。\
+型そのもの＋サブタイプ＋スーパータイプを許容する。
+
+<pre class="language-typescript"><code class="lang-typescript"><strong>// tsconfig.json
+</strong><strong>strictFunctionChecks: true  
+</strong>
+type TakeB = (arg: T) => void;
+const t1: TakeB&#x3C;B> = (arg: A) => {};
+const t2: TakeB&#x3C;B> = (arg: B) => {};
+const t3: TakeB&#x3C;B> = (arg: C) => {}; ❌ ERROR
+</code></pre>
+
+<pre class="language-typescript"><code class="lang-typescript"><strong>// tsconfig.json
+</strong><strong>strictFunctionChecks: false
+</strong>
+type TakeB = (arg: T) => void;
+const t1: TakeB&#x3C;B> = (arg: A) => {};
+const t2: TakeB&#x3C;B> = (arg: B) => {};
+const t3: TakeB&#x3C;B> = (arg: C) => {};
+</code></pre>
