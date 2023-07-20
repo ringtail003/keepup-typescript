@@ -13,6 +13,7 @@
   * [Optional Variance Annotations for Type Parameters](release/4.7/optional-variance-annotations-for-type-parameters.md)
   * [Resolution Customization with moduleSuffixes](release/4.7/resolution-customization-with-modulesuffixes.md)
   * [resolution-mode](release/4.7/resolution-mode.md)
+  * [Go to Source Definition](release/4.7/go-to-source-definition.md)
 * [4.6](release/4.6/README.md)
   * [Allowing Code in Constructors Before super()](release/4.6/allowing-code-in-constructors-before-super.md)
   * [Control Flow Analysis for Destructured Discriminated Unions](release/4.6/control-flow-analysis-for-destructured-discriminated-unions.md)
