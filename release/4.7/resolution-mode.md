@@ -13,7 +13,7 @@
 /// <reference types="pkg" resolution-mode="import" />
 ```
 
-import構文は以下のように記述する。
+import構文は以下のように記述する。（Nightly Buildでサポート）
 
 ```typescript
 import type { TypeFromRequire } from "pkg" assert {
@@ -25,4 +25,4 @@ import type { TypeFromImport } from "pkg" assert {
 };
 ```
 
-ユースケースは分からない。
+import構文は以下のように記述する。（Nightly Buildでサポート）
