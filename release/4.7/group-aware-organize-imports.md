@@ -20,7 +20,7 @@ import * as child_process from "child_process"
 import * as fs from "fs";
 ```
 
-以下のようになっていた。
+改善前はこのようになっていた。
 
 ```typescript
 // local code
@@ -33,4 +33,15 @@ import * as bbb from "./bbb";
 import * as ccc from "./ccc";
 ```
 
-改善後はこうなる。\`\`い
+改善後はこうなる。
+
+```typescript
+// local code
+import * as aaa from "./aaa";
+import * as bbb from "./bbb";
+import * as ccc from "./ccc";
+// built-ins
+import * as child_process from "child_process";
+import * as fs from "fs";
+import * as path from "path";
+```
