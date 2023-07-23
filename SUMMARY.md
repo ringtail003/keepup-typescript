@@ -4,6 +4,8 @@
 
 ## Release
 
+* [4.8](release/4.8/README.md)
+  * [Improved Intersection Reduction, Union Compatibility, and Narrowing](release/4.8/improved-intersection-reduction-union-compatibility-and-narrowing.md)
 * [4.7](release/4.7/README.md)
   * [ECMAScript Module Support in Node.js](release/4.7/ecmascript-module-support-in-node.js.md)
   * [Control-Flow Analysis for Bracketed Element Access](release/4.7/control-flow-analysis-for-bracketed-element-access.md)
