@@ -4,7 +4,7 @@
 
 エディタで宣言（d.ts）より先の実装（.jsや.cjs）にジャンプできるようになった。
 
-## 内容
+## 例
 
 Visual Studio Codeのコンテキストメニューで「Go to Source Implementation」が選択できる。
 
