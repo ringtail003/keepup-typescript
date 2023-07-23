@@ -13,6 +13,8 @@
 以下の機能が破壊的変更を含む。\
 暗黙のうちに許容していたnull,undefinedに対してエラーが発生する。
 
+{% embed url="https://app.gitbook.com/s/9aquqlNjxpewEborrRfQ/~/changes/117/release/4.8/improved-intersection-reduction-union-compatibility-and-narrowing" %}
+
 {% content-ref url="improved-inference-from-binding-patterns.md" %}
 [improved-inference-from-binding-patterns.md](improved-inference-from-binding-patterns.md)
 {% endcontent-ref %}
