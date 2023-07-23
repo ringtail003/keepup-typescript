@@ -16,6 +16,7 @@
   * [Go to Source Definition](release/4.7/go-to-source-definition.md)
   * [Group-Aware Organize Imports](release/4.7/group-aware-organize-imports.md)
   * [Object Method Snippet Completions](release/4.7/object-method-snippet-completions.md)
+  * [BREAKING CHANGE: lib.d.ts Updates](release/4.7/breaking-change-lib.d.ts-updates.md)
 * [4.6](release/4.6/README.md)
   * [Allowing Code in Constructors Before super()](release/4.6/allowing-code-in-constructors-before-super.md)
   * [Control Flow Analysis for Destructured Discriminated Unions](release/4.6/control-flow-analysis-for-destructured-discriminated-unions.md)
