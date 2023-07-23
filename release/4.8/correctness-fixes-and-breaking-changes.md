@@ -26,3 +26,6 @@ ECMAScriptのデコレータにアクセスするための関数が公開され�
 function canHaveModifiers(node: Node): node is HasModifiers;
 function getModifiers(node: HasModifiers): readonly Modifier[] | undefined;
 ```
+
+## Types Cannot Be Imported/Exported in JavaScript Files
+
