@@ -11,6 +11,8 @@
   * [Errors When Comparing Object and Array Literals](release/4.8/errors-when-comparing-object-and-array-literals.md)
   * [Improved Inference from Binding Patterns](release/4.8/improved-inference-from-binding-patterns.md)
   * [File-Watching Fixes (Especially Across git checkout s)](release/4.8/file-watching-fixes-especially-across-git-checkout-s.md)
+  * [Find-All-References Performance Improvements](release/4.8/find-all-references-performance-improvements.md)
+  * [Correctness Fixes and Breaking Changes](release/4.8/correctness-fixes-and-breaking-changes.md)
 * [4.7](release/4.7/README.md)
   * [ECMAScript Module Support in Node.js](release/4.7/ecmascript-module-support-in-node.js.md)
   * [Control-Flow Analysis for Bracketed Element Access](release/4.7/control-flow-analysis-for-bracketed-element-access.md)
