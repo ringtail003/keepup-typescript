@@ -4,6 +4,8 @@
 
 ## Release
 
+* [4.9](release/4.9/README.md)
+  * [The satisfies Operator](release/4.9/the-satisfies-operator.md)
 * [4.8](release/4.8/README.md)
   * [Improved Intersection Reduction, Union Compatibility, and Narrowing](release/4.8/improved-intersection-reduction-union-compatibility-and-narrowing.md)
   * [Improved Inference for infer Types in Template String Types](release/4.8/improved-inference-for-infer-types-in-template-string-types.md)
