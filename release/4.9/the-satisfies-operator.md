@@ -10,21 +10,23 @@ const colors = {
 } as const satisfies Record<Colors, string | boolean>;
 ```
 
-## オブジェクト値の型を推論できる
+## 効果
+
+### オブジェクト値の型を推論できる
 
 ```typescript
 const g: string = colors.green;
 // ERROR: Type 'boolean' is not assignable to type 'string'.
 ```
 
-## \[as constがない場合] 誤った型の代入を防げる
+### \[as constがない場合] 誤った型の代入を防げる
 
 ```typescript
 colors.red = true;
 // ERROR: Type 'boolean' is not assignable to type 'string'.
 ```
 
-## \[as constがある場合] 書き換えを防止する
+### \[as constがある場合] 書き換えを防止する
 
 ```typescript
 colors.red = "magenda";
@@ -51,3 +53,6 @@ colors.red = "lime";
 
 ```
 
+## 参考
+
+{% embed url="https://qiita.com/Yametaro/items/494c6e69f7e9bede2197" %}
