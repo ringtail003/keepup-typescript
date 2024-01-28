@@ -7,12 +7,20 @@ const colors = {
     red: "yes",
     green: false,
     blue: "kinda",
+} satisfies Record<Colors, string | boolean>;
+```
+
+constとの併用も可。
+
+```typescript
+const colors = {
+    ...
 } as const satisfies Record<Colors, string | boolean>;
 ```
 
 ## 効果
 
-### オブジェクト値の型を推論できる
+### 誤った型の代入を防げる
 
 ```typescript
 const g: string = colors.green;
@@ -26,11 +34,18 @@ colors.red = true;
 // ERROR: Type 'boolean' is not assignable to type 'string'.
 ```
 
-### \[as constがある場合] 書き換えを防止する
+### JSコードのセマンティクスを変えずにTSに移植できる
 
 ```typescript
-colors.red = "magenda";
-// ERROR: Cannot assign to 'red' because it is a read-only property.
+// JS
+const json = JSON.stringify({ id: 1 });
+
+// TS: satisfiesあり
+const json = JSON.stringify({ id: 1 } satisfies { id: number });
+
+// TS: satisfiesなし
+const foo: FOO = { id: 1 };
+const json = JSON.stringify(foo);
 ```
 
 ## 従来の書き方
@@ -56,3 +71,5 @@ colors.red = "lime";
 ## 参考
 
 {% embed url="https://qiita.com/Yametaro/items/494c6e69f7e9bede2197" %}
+
+{% embed url="https://qiita.com/suin/items/1b74645158263d2fa9af" %}
