@@ -20,30 +20,37 @@ const colors = {
 
 ## 効果
 
-### 誤った型の代入を防げる
+### 誤った型の参照や代入を防げる
 
 ```typescript
 const g: string = colors.green;
 // ERROR: Type 'boolean' is not assignable to type 'string'.
-```
 
-### \[as constがない場合] 誤った型の代入を防げる
-
-```typescript
 colors.red = true;
 // ERROR: Type 'boolean' is not assignable to type 'string'.
 ```
 
-### JSコードのセマンティクスを変えずにTSに移植できる
+### 存在しないプロパティの代入を防げる
 
 ```typescript
-// JS
-const json = JSON.stringify({ id: 1 });
+colors.reeeeeeed = "foo";
+// ERROR: Property 'reeeeeeed' does not exist on type { ... }
+```
 
-// TS: satisfiesあり
+### as constと併用するとreadonlyが簡易に書ける
+
+```typescript
+colors.red = "YES";
+// ERROR: Cannot assign to 'red' because it is a read-only property.
+```
+
+### セマンティクスを変えずに移植できる
+
+```typescript
+// satisfiesあり
 const json = JSON.stringify({ id: 1 } satisfies { id: number });
 
-// TS: satisfiesなし
+// satisfiesなし
 const foo: FOO = { id: 1 };
 const json = JSON.stringify(foo);
 ```
