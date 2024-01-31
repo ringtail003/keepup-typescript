@@ -8,6 +8,7 @@
   * [The satisfies Operator](release/4.9/the-satisfies-operator.md)
   * [Unlisted Property Narrowing with the in Operator](release/4.9/unlisted-property-narrowing-with-the-in-operator.md)
   * [Auto-Accessors in Classes](release/4.9/auto-accessors-in-classes.md)
+  * [Checks For Equality of \`NaN\`](release/4.9/checks-for-equality-of-nan.md)
 * [4.8](release/4.8/README.md)
   * [Improved Intersection Reduction, Union Compatibility, and Narrowing](release/4.8/improved-intersection-reduction-union-compatibility-and-narrowing.md)
   * [Improved Inference for infer Types in Template String Types](release/4.8/improved-inference-for-infer-types-in-template-string-types.md)
