@@ -10,6 +10,7 @@
   * [Auto-Accessors in Classes](release/4.9/auto-accessors-in-classes.md)
   * [Checks For Equality of \`NaN\`](release/4.9/checks-for-equality-of-nan.md)
   * [File-Watching Now Uses File System Events](release/4.9/file-watching-now-uses-file-system-events.md)
+  * [“Remove Unused Imports” and “Sort Imports” Commands for Editors](release/4.9/remove-unused-imports-and-sort-imports-commands-for-editors.md)
 * [4.8](release/4.8/README.md)
   * [Improved Intersection Reduction, Union Compatibility, and Narrowing](release/4.8/improved-intersection-reduction-union-compatibility-and-narrowing.md)
   * [Improved Inference for infer Types in Template String Types](release/4.8/improved-inference-for-infer-types-in-template-string-types.md)
