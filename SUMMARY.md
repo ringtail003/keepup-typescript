@@ -13,6 +13,7 @@
   * [“Remove Unused Imports” and “Sort Imports” Commands for Editors](release/4.9/remove-unused-imports-and-sort-imports-commands-for-editors.md)
   * [Go-to-Definition on return Keywords](release/4.9/go-to-definition-on-return-keywords.md)
   * [Performance Improvements](release/4.9/performance-improvements.md)
+  * [Correctness Fixes and Breaking Changes](release/4.9/correctness-fixes-and-breaking-changes.md)
 * [4.8](release/4.8/README.md)
   * [Improved Intersection Reduction, Union Compatibility, and Narrowing](release/4.8/improved-intersection-reduction-union-compatibility-and-narrowing.md)
   * [Improved Inference for infer Types in Template String Types](release/4.8/improved-inference-for-infer-types-in-template-string-types.md)
