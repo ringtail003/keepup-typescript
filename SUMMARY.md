@@ -4,6 +4,8 @@
 
 ## Release
 
+* [5.0](release/5.0/README.md)
+  * [Decorators](release/5.0/decorators.md)
 * [4.9](release/4.9/README.md)
   * [The satisfies Operator](release/4.9/the-satisfies-operator.md)
   * [Unlisted Property Narrowing with the in Operator](release/4.9/unlisted-property-narrowing-with-the-in-operator.md)
