@@ -76,3 +76,8 @@ class Person {
 * Class fields (public, private, and static)
 * Class methods (public, private, and static)
 * Class accessors (public, private, and static)
+
+### Differences with Experimental Legacy Decorators
+
+`--experimentalDecorators` フラグは当面残る。\
+実験段階の古いデコレーターもフラグをオンにすることで使用できるが、新旧のシンタックスが混在するとエラーになる。
