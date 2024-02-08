@@ -9,6 +9,7 @@
   * [\`const\` type Parameters](release/5.0/const-type-parameters.md)
   * [Supporting Multiple Configuration Files in \`extends\`](release/5.0/supporting-multiple-configuration-files-in-extends.md)
   * [All \`enum\` s Are Union \`enum\` s](release/5.0/all-enum-s-are-union-enum-s.md)
+  * [--moduleResolution bundler](release/5.0/moduleresolution-bundler.md)
 * [4.9](release/4.9/README.md)
   * [The satisfies Operator](release/4.9/the-satisfies-operator.md)
   * [Unlisted Property Narrowing with the in Operator](release/4.9/unlisted-property-narrowing-with-the-in-operator.md)
