@@ -51,3 +51,27 @@ styles.foo;
 ```
 
 CSSを変数としてアクセスするため型が必要になる。 `app.css.d.ts` でなく `app.d.css.ts` を読み込めるようにオプションが追加された。たぶんバンドラーの出力を考慮したもの。
+
+## customConditions
+
+エントリポイント読み込みにカスタム指定を追加できる。
+
+```typescript
+// tsconfig.json（ライブラリ側）
+exports: {
+    ".": {
+        "my-condition": "./foo.mjs",
+        "node: "..",
+        "import: "..",
+        "require": "..",
+    }
+}
+```
+
+```typescript
+// tsconfit.json（利用側）
+compilerOptions: {
+    moduleResolution: "bundler",
+    customConditions: ["my-condition"]
+}
+```
