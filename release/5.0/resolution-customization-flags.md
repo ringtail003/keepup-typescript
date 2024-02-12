@@ -40,3 +40,14 @@ import app from "#app";
 環境が `node` なら `app-node.js` 、条件指定がなければ `app.js` を参照する。
 
 &#x20;`--moduleResolution` で `node16 / nodenext` を指定するとデフォルトtrueになる。
+
+## allowArbitraryExtensions
+
+React用の拡張のよう。
+
+```typescript
+import styles from "./app.css";
+styles.foo;
+```
+
+CSSを変数としてアクセスするため型が必要になる。 `app.css.d.ts` でなく `app.d.css.ts` を読み込めるようにオプションが追加された。たぶんバンドラーの出力を考慮したもの。
