@@ -13,6 +13,7 @@
   * [Resolution Customization Flags](release/5.0/resolution-customization-flags.md)
   * [--verbatimModuleSyntax](release/5.0/verbatimmodulesyntax.md)
   * [Support for \`export type \*\`](release/5.0/support-for-export-type.md)
+  * [\`@satisfies\` Support in JSDoc](release/5.0/satisfies-support-in-jsdoc.md)
 * [4.9](release/4.9/README.md)
   * [The satisfies Operator](release/4.9/the-satisfies-operator.md)
   * [Unlisted Property Narrowing with the in Operator](release/4.9/unlisted-property-narrowing-with-the-in-operator.md)
