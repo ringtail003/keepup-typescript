@@ -18,6 +18,8 @@
   * [Passing Emit-Specific Flags Under  --build](release/5.0/passing-emit-specific-flags-under-build.md)
   * [Case-Insensitive Import Sorting in Editors](release/5.0/case-insensitive-import-sorting-in-editors.md)
   * [Exhaustive switch/case Completions](release/5.0/exhaustive-switch-case-completions.md)
+  * [Speed, Memory, and Package Size Optimizations](release/5.0/speed-memory-and-package-size-optimizations.md)
+  * [Breaking Changes and Deprecations](release/5.0/breaking-changes-and-deprecations.md)
 * [4.9](release/4.9/README.md)
   * [The satisfies Operator](release/4.9/the-satisfies-operator.md)
   * [Unlisted Property Narrowing with the in Operator](release/4.9/unlisted-property-narrowing-with-the-in-operator.md)
