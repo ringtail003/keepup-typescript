@@ -4,6 +4,8 @@
 
 ## Release
 
+* [5.1](release/5.1/README.md)
+  * [Easier Implicit Returns for  undefined -Returning Functions](release/5.1/easier-implicit-returns-for-undefined-returning-functions.md)
 * [5.0](release/5.0/README.md)
   * [Decorators](release/5.0/decorators.md)
   * [\`const\` type Parameters](release/5.0/const-type-parameters.md)
