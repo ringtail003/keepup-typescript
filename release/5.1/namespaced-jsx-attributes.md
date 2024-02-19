@@ -1,0 +1,3 @@
+# Namespaced JSX Attributes
+
+JSXのアップデートのためパス。
