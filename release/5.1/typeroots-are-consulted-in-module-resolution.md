@@ -2,10 +2,14 @@
 
 ## TL;DR
 
-`tsconfig.json` の `typeRoots` で親フォルダを遡る時の挙動が変わった？
+`tsconfig.json` の `typeRoots` の検索の挙動が変わった。
 
 ```typescript
 compilerOptions: {
+    types: [
+        "node",
+        "mocha",
+    ],
     typeRoots: [
         "./vendor/types", // (1) @typesフォルダに含まれない型
         "./node_modules/@types", // (2) プロジェクト内のnpmパッケージの型
@@ -14,7 +18,7 @@ compilerOptions: {
 }
 ```
 
-今まで(3)は記述がなくても検索されていたが、過剰な検索を避けるため記述が必要になった。という事だと思う。
+以前のバージョンでは親フォルダを遡る挙動だったため(3)は記述がなくても(2)によって検索されていた。5.1から(3)は明示的な指定が必要。
 
 ## 参考
 
