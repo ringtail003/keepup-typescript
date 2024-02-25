@@ -13,6 +13,7 @@
   * [Move Declarations to Existing Files](release/5.1/move-declarations-to-existing-files.md)
   * [Linked Cursors for JSX Tags](release/5.1/linked-cursors-for-jsx-tags.md)
   * [Snippet Completions for @param JSDoc Tags](release/5.1/snippet-completions-for-param-jsdoc-tags.md)
+  * [Optimizations](release/5.1/optimizations.md)
 * [5.0](release/5.0/README.md)
   * [Decorators](release/5.0/decorators.md)
   * [\`const\` type Parameters](release/5.0/const-type-parameters.md)
