@@ -4,6 +4,8 @@
 
 ## Release
 
+* [5.2](release/5.2/README.md)
+  * [\`using\` Declarations and Explicit Resource Management](release/5.2/using-declarations-and-explicit-resource-management.md)
 * [5.1](release/5.1/README.md)
   * [Easier Implicit Returns for  undefined -Returning Functions](release/5.1/easier-implicit-returns-for-undefined-returning-functions.md)
   * [Unrelated Types for Getters and Setters](release/5.1/unrelated-types-for-getters-and-setters.md)
