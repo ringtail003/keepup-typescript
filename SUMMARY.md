@@ -8,6 +8,7 @@
   * [\`using\` Declarations and Explicit Resource Management](release/5.2/using-declarations-and-explicit-resource-management.md)
   * [Decorator Metadeta](release/5.2/decorator-metadeta.md)
   * [Named and Anonymous Tuple Elements](release/5.2/named-and-anonymous-tuple-elements.md)
+  * [Easier Method Usage for Unions of Arrays](release/5.2/easier-method-usage-for-unions-of-arrays.md)
 * [5.1](release/5.1/README.md)
   * [Easier Implicit Returns for  undefined -Returning Functions](release/5.1/easier-implicit-returns-for-undefined-returning-functions.md)
   * [Unrelated Types for Getters and Setters](release/5.1/unrelated-types-for-getters-and-setters.md)
