@@ -13,6 +13,7 @@
   * [Comma Completions for Object Members](release/5.2/comma-completions-for-object-members.md)
   * [Inline Variable Refactoring](release/5.2/inline-variable-refactoring.md)
   * [Optimized Checks for Ongoing Type Compatibility](release/5.2/optimized-checks-for-ongoing-type-compatibility.md)
+  * [Breaking Changes and Correctness Fixes](release/5.2/breaking-changes-and-correctness-fixes.md)
 * [5.1](release/5.1/README.md)
   * [Easier Implicit Returns for  undefined -Returning Functions](release/5.1/easier-implicit-returns-for-undefined-returning-functions.md)
   * [Unrelated Types for Getters and Setters](release/5.1/unrelated-types-for-getters-and-setters.md)
