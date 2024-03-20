@@ -4,6 +4,8 @@
 
 ## Release
 
+* [5.3](release/5.3/README.md)
+  * [Import Attributes](release/5.3/import-attributes.md)
 * [5.2](release/5.2/README.md)
   * [\`using\` Declarations and Explicit Resource Management](release/5.2/using-declarations-and-explicit-resource-management.md)
   * [Decorator Metadeta](release/5.2/decorator-metadeta.md)
