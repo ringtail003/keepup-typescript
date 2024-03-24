@@ -8,6 +8,7 @@
   * [Import Attributes](release/5.3/import-attributes.md)
   * [Stable Support \`resolution-mode\` in Import Types](release/5.3/stable-support-resolution-mode-in-import-types.md)
   * [\`resolution-mode\` Supported in All Module Modes](release/5.3/resolution-mode-supported-in-all-module-modes.md)
+  * [\`switch (true)\` Narrowing](release/5.3/switch-true-narrowing.md)
 * [5.2](release/5.2/README.md)
   * [\`using\` Declarations and Explicit Resource Management](release/5.2/using-declarations-and-explicit-resource-management.md)
   * [Decorator Metadeta](release/5.2/decorator-metadeta.md)
