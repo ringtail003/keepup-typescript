@@ -10,6 +10,8 @@
   * [\`resolution-mode\` Supported in All Module Modes](release/5.3/resolution-mode-supported-in-all-module-modes.md)
   * [\`switch (true)\` Narrowing](release/5.3/switch-true-narrowing.md)
   * [Narrowing On Comparisons to Booleans](release/5.3/narrowing-on-comparisons-to-booleans.md)
+  * [\`instanceof\` Narrowing Through \`Symbol.hasInstance\`](release/5.3/instanceof-narrowing-through-symbol.hasinstance.md)
+  * [Checks for \`super\` Property Access on Instance Fields](release/5.3/checks-for-super-property-access-on-instance-fields.md)
 * [5.2](release/5.2/README.md)
   * [\`using\` Declarations and Explicit Resource Management](release/5.2/using-declarations-and-explicit-resource-management.md)
   * [Decorator Metadeta](release/5.2/decorator-metadeta.md)
