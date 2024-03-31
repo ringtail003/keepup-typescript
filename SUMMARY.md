@@ -16,6 +16,8 @@
   * [Settings to Prefer \`type\` Auto-Imports](release/5.3/settings-to-prefer-type-auto-imports.md)
   * [Optimizations by Skipping JSDoc Parsing](release/5.3/optimizations-by-skipping-jsdoc-parsing.md)
   * [Optimizations by Comparing Non-Normalized Intersections](release/5.3/optimizations-by-comparing-non-normalized-intersections.md)
+  * [Consolidation Between \`tsserverlibrary.js\` and \`typescript.js\`](release/5.3/consolidation-between-tsserverlibrary.js-and-typescript.js.md)
+  * [Breaking Changes and Correctness Improvements](release/5.3/breaking-changes-and-correctness-improvements.md)
 * [5.2](release/5.2/README.md)
   * [\`using\` Declarations and Explicit Resource Management](release/5.2/using-declarations-and-explicit-resource-management.md)
   * [Decorator Metadeta](release/5.2/decorator-metadeta.md)
