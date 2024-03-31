@@ -12,6 +12,8 @@
   * [Narrowing On Comparisons to Booleans](release/5.3/narrowing-on-comparisons-to-booleans.md)
   * [\`instanceof\` Narrowing Through \`Symbol.hasInstance\`](release/5.3/instanceof-narrowing-through-symbol.hasinstance.md)
   * [Checks for \`super\` Property Access on Instance Fields](release/5.3/checks-for-super-property-access-on-instance-fields.md)
+  * [Interactive Inlay Hints for Types](release/5.3/interactive-inlay-hints-for-types.md)
+  * [Settings to Prefer \`type\` Auto-Imports](release/5.3/settings-to-prefer-type-auto-imports.md)
 * [5.2](release/5.2/README.md)
   * [\`using\` Declarations and Explicit Resource Management](release/5.2/using-declarations-and-explicit-resource-management.md)
   * [Decorator Metadeta](release/5.2/decorator-metadeta.md)
