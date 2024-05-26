@@ -4,6 +4,8 @@
 
 ## Release
 
+* [5.4](release/5.4/README.md)
+  * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
 * [5.3](release/5.3/README.md)
   * [Import Attributes](release/5.3/import-attributes.md)
   * [Stable Support \`resolution-mode\` in Import Types](release/5.3/stable-support-resolution-mode-in-import-types.md)
