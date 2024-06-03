@@ -5,6 +5,7 @@
 ## Release
 
 * [5.4](release/5.4/README.md)
+  * [Object.groupBy and Map.groupBy](release/5.4/object.groupby-and-map.groupby.md)
   * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
   * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
 * [5.3](release/5.3/README.md)
