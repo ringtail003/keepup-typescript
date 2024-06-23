@@ -5,9 +5,10 @@
 ## Release
 
 * [5.4](release/5.4/README.md)
-  * [Object.groupBy and Map.groupBy](release/5.4/object.groupby-and-map.groupby.md)
-  * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
   * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
+  * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
+  * [Object.groupBy and Map.groupBy](release/5.4/object.groupby-and-map.groupby.md)
+  * [Support for require() calls in --moduleResolution bundler and --module preserve](release/5.4/support-for-require-calls-in-moduleresolution-bundler-and-module-preserve.md)
 * [5.3](release/5.3/README.md)
   * [Import Attributes](release/5.3/import-attributes.md)
   * [Stable Support \`resolution-mode\` in Import Types](release/5.3/stable-support-resolution-mode-in-import-types.md)
