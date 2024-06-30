@@ -71,3 +71,28 @@ function foo(x: First.SomeEnum, y: Second.SomeEnum) {
   y = x; // Error
 }
 ```
+
+### Name Restrictions on Enum Members
+
+Enumのキーに `Infinity` `NaN` が使用できなくなった。
+
+```typescript
+// ERROR
+Enum E {
+  Infinity = 0,
+  "-Infinity" = 1,
+  NaN = 2,
+}
+```
+
+### Better Mapped Type Preservation Over Tuples with any Rest Elements
+
+引数でany型と推論されていた箇所についてより正確に推論できるようになった。
+
+```typescript
+Promise.all(["", ...([] as any)])
+    .then((result) => {
+        const head = result[0];       // 5.3: any, 5.4: string
+        const tail = result.slice(1); // 5.3 any, 5.4: any[]
+    });
+```
