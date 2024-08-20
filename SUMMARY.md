@@ -4,6 +4,8 @@
 
 ## Release
 
+* [5.5](release/5.5/README.md)
+  * [Inferred Type Predicates](release/5.5/inferred-type-predicates.md)
 * [5.4](release/5.4/README.md)
   * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
   * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
