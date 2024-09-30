@@ -9,6 +9,7 @@
   * [Control Flow Narrowing for Constant Indexed Accesses](release/5.5/control-flow-narrowing-for-constant-indexed-accesses.md)
   * [The JSDoc @import Tag](release/5.5/the-jsdoc-import-tag.md)
   * [Regular Expression Syntax Checking](release/5.5/regular-expression-syntax-checking.md)
+  * [Support for New ECMAScript Set Methods](release/5.5/support-for-new-ecmascript-set-methods.md)
 * [5.4](release/5.4/README.md)
   * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
   * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
