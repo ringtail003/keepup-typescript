@@ -14,6 +14,12 @@ a1.union(a2);
 a1.difference(a2);
 ```
 
-&#x20;メモ
+intersection,union,difference
 
 [https://stackblitz.com/edit/stackblitz-starters-m2gdh8?description=HTML/CSS/JS%20Starter\&file=script.js,styles.css,index.html\&terminalHeight=10\&title=Static%20Starter](https://stackblitz.com/edit/stackblitz-starters-m2gdh8?description=HTML/CSS/JS%20Starter\&file=script.js,styles.css,index.html\&terminalHeight=10\&title=Static%20Starter)
+
+
+
+isDisjointFrom,isSubsetOf,isSupersetOf
+
+[https://stackblitz.com/edit/stackblitz-starters-dx1wgx?description=HTML/CSS/JS%20Starter\&file=script.js,styles.css,index.html\&terminalHeight=10\&title=Static%20Starter](https://stackblitz.com/edit/stackblitz-starters-dx1wgx?description=HTML/CSS/JS%20Starter\&file=script.js,styles.css,index.html\&terminalHeight=10\&title=Static%20Starter)
