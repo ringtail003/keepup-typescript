@@ -16,10 +16,14 @@ a1.difference(a2);
 
 ## intersection,union,difference
 
+[https://stackblitz.com/edit/stackblitz-starters-m2gdh8?file=index.html](https://stackblitz.com/edit/stackblitz-starters-m2gdh8?file=index.html)
+
 {% embed url="https://stackblitz.com/edit/stackblitz-starters-m2gdh8?embed=1&file=index.html&view=preview" %}
 
 
 
 ## isDisjointFrom,isSubsetOf,isSupersetOf
+
+[https://stackblitz.com/edit/stackblitz-starters-dx1wgx?file=index.html](https://stackblitz.com/edit/stackblitz-starters-dx1wgx?file=index.html)
 
 {% embed url="https://stackblitz.com/edit/stackblitz-starters-dx1wgx?embed=1&file=index.html&view=preview" %}
