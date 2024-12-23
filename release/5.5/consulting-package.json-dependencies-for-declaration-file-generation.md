@@ -8,7 +8,4 @@ The inferred type of "X" cannot be named without a reference to "Y". This is lik
 ```
 {% endcode %}
 
-上記エラーに対する改善。\
-シンボリックリンクの追跡プロセスを改善し、エディタの監視モードなどの処理で開発者体験が向上した。
-
-具体的に何がどのように変わったのか不明。
+従来のバージョンでは明示的にインポートされていないファイルで、型が解決できず上記エラーが発生していた。5.5からpackage.jsonのdependencies、peerDependencies、optionalDependenciesの依存関係を追跡するようになり、エラーが解消した。
