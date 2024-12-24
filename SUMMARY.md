@@ -15,6 +15,7 @@
   * [Consulting package.json Dependencies for Declaration File Generation](release/5.5/consulting-package.json-dependencies-for-declaration-file-generation.md)
   * [Editor and Watch-Mode Reliability Improvements](release/5.5/editor-and-watch-mode-reliability-improvements.md)
   * [Performance and Size Optimizations](release/5.5/performance-and-size-optimizations.md)
+  * [Easier API Consumption from ECMAScript Modules](release/5.5/easier-api-consumption-from-ecmascript-modules.md)
 * [5.4](release/5.4/README.md)
   * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
   * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
