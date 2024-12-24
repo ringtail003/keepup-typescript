@@ -13,6 +13,7 @@
   * [Isolated Declarations](release/5.5/isolated-declarations.md)
   * [The ${configDir} Template Variable for Configuration Files](release/5.5/the-usd-configdir-template-variable-for-configuration-files.md)
   * [Consulting package.json Dependencies for Declaration File Generation](release/5.5/consulting-package.json-dependencies-for-declaration-file-generation.md)
+  * [Editor and Watch-Mode Reliability Improvements](release/5.5/editor-and-watch-mode-reliability-improvements.md)
 * [5.4](release/5.4/README.md)
   * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
   * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
