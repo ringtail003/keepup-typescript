@@ -17,6 +17,7 @@
   * [Performance and Size Optimizations](release/5.5/performance-and-size-optimizations.md)
   * [Easier API Consumption from ECMAScript Modules](release/5.5/easier-api-consumption-from-ecmascript-modules.md)
   * [The transpileDeclaration API](release/5.5/the-transpiledeclaration-api.md)
+  * [Notable Behavioral Changes](release/5.5/notable-behavioral-changes.md)
 * [5.4](release/5.4/README.md)
   * [Preserved Narrowing in Closures Following Last Assignments](release/5.4/preserved-narrowing-in-closures-following-last-assignments.md)
   * [The NoInfer Utility Type](release/5.4/the-noinfer-utility-type.md)
