@@ -4,6 +4,8 @@
 
 ## Release
 
+* [5.6](release/5.6/README.md)
+  * [Disallowed Nullish and Truthy Checks](release/5.6/disallowed-nullish-and-truthy-checks.md)
 * [5.5](release/5.5/README.md)
   * [Inferred Type Predicates](release/5.5/inferred-type-predicates.md)
   * [Control Flow Narrowing for Constant Indexed Accesses](release/5.5/control-flow-narrowing-for-constant-indexed-accesses.md)
