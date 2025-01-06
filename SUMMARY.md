@@ -9,6 +9,7 @@
   * [Iterator Helper Methods](release/5.6/iterator-helper-methods.md)
   * [Strict Builtin Iterator Checks (and --strictBuiltinIteratorReturn)](release/5.6/strict-builtin-iterator-checks-and-strictbuiltiniteratorreturn.md)
   * [Support for Arbitrary Module Identifiers](release/5.6/support-for-arbitrary-module-identifiers.md)
+  * [The --noUncheckedSideEffectImports Option](release/5.6/the-nouncheckedsideeffectimports-option.md)
 * [5.5](release/5.5/README.md)
   * [Inferred Type Predicates](release/5.5/inferred-type-predicates.md)
   * [Control Flow Narrowing for Constant Indexed Accesses](release/5.5/control-flow-narrowing-for-constant-indexed-accesses.md)
