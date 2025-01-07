@@ -12,6 +12,7 @@
   * [The --noUncheckedSideEffectImports Option](release/5.6/the-nouncheckedsideeffectimports-option.md)
   * [The --noCheck Option](release/5.6/the-nocheck-option.md)
   * [Allow --build with Intermediate Errors](release/5.6/allow-build-with-intermediate-errors.md)
+  * [Region-Prioritized Diagnostics in Editors](release/5.6/region-prioritized-diagnostics-in-editors.md)
 * [5.5](release/5.5/README.md)
   * [Inferred Type Predicates](release/5.5/inferred-type-predicates.md)
   * [Control Flow Narrowing for Constant Indexed Accesses](release/5.5/control-flow-narrowing-for-constant-indexed-accesses.md)
