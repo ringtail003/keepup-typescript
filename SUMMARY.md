@@ -4,6 +4,11 @@
 
 ## Release
 
+* [5.7](release/5.7/README.md)
+  * [Checks for Never-Initialized Variables](release/5.7/checks-for-never-initialized-variables.md)
+  * [Path Rewriting for Relative Paths](release/5.7/path-rewriting-for-relative-paths.md)
+  * [Support for --target es2024 and --lib es2024](release/5.7/support-for-target-es2024-and-lib-es2024.md)
+  * [Searching Ancestor Configuration Files for Project Ownership](release/5.7/searching-ancestor-configuration-files-for-project-ownership.md)
 * [5.6](release/5.6/README.md)
   * [Disallowed Nullish and Truthy Checks](release/5.6/disallowed-nullish-and-truthy-checks.md)
   * [Iterator Helper Methods](release/5.6/iterator-helper-methods.md)
