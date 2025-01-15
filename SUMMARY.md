@@ -11,6 +11,8 @@
   * [Searching Ancestor Configuration Files for Project Ownership](release/5.7/searching-ancestor-configuration-files-for-project-ownership.md)
   * [Faster Project Ownership Checks in Editors for Composite Projects](release/5.7/faster-project-ownership-checks-in-editors-for-composite-projects.md)
   * [Validated JSON Imports in --module nodenext](release/5.7/validated-json-imports-in-module-nodenext.md)
+  * [Support for V8 Compile Caching in Node.js](release/5.7/support-for-v8-compile-caching-in-node.js.md)
+  * [Notable Behavioral Changes](release/5.7/notable-behavioral-changes.md)
 * [5.6](release/5.6/README.md)
   * [Disallowed Nullish and Truthy Checks](release/5.6/disallowed-nullish-and-truthy-checks.md)
   * [Iterator Helper Methods](release/5.6/iterator-helper-methods.md)
