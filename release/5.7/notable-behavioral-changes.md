@@ -15,3 +15,27 @@ ArrayBufferの派生であるUint8Array、Int32Arrayなどが型パラメータ�
 ```typescript
 error ***: Type '***' is not assignable to type 'Uint8Array<ArrayBufferLike>'
 ```
+
+## Creating Index Signatures from Non-Literal Method Names in Classes
+
+.従来はクラスのメンバ関数がSymbolで与えれている場合に、TS内部でindex signatureが生成されていなかった。
+
+```typescript
+declare const symbol1: symbol;
+
+export class A {
+  [symbol1]() { return 1; }
+}
+```
+
+```typescript
+// < v5.7での解釈
+export class A {}
+
+// v5.7+での解釈
+export class A {
+  [x: symbol]: () => number;
+}
+```
+
+これにより、オブジェクトリテラルのメンバ変数と一貫した挙動を提供できるようになった。
