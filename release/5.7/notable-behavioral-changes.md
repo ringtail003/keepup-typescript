@@ -39,3 +39,14 @@ export class A {
 ```
 
 これにより、オブジェクトリテラルのメンバ変数と一貫した挙動を提供できるようになった。
+
+## More Implicit any Errors on Functions Returning null and undefined
+
+関数がnullまたはundefinedを返却する場合に `--NoImplicitAny` オプション環境下でエラーが出力されるようになった。
+
+```typescript
+declare var p: Promise<number>;
+
+p.catch(() => null);
+// error TS7011: Function expression, which lacks return-type annotation, implicitly has an 'any' return type.
+```
