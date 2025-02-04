@@ -4,6 +4,9 @@
 
 ## Release
 
+* [5.8](release/5.8/README.md)
+  * [plan: Checked Return Statements for Conditional and Indexed Access Types](release/5.8/plan-checked-return-statements-for-conditional-and-indexed-access-types.md)
+  * [plan: --erasableSyntaxOnly Flag](release/5.8/plan-erasablesyntaxonly-flag.md)
 * [5.7](release/5.7/README.md)
   * [Checks for Never-Initialized Variables](release/5.7/checks-for-never-initialized-variables.md)
   * [Path Rewriting for Relative Paths](release/5.7/path-rewriting-for-relative-paths.md)
