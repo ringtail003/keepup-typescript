@@ -16,4 +16,6 @@ function getUrlObject(urlString: string): URL {
 }
 ```
 
-以前のバージョンでは `cond ? trueBranch : falseBranch`のように分岐する場合、各ブランチの型チェック
+以前のバージョンでは `cond ? A : B`のように分岐する場合、戻り値の型はunion（ `A | B` ）と推論されていた。上記例の場合、unionにanyが含まれるためstringを許容している。
+
+v5.8から `A` と `B` それぞれの型が戻り値とマッチするかチェックされるようになった。
