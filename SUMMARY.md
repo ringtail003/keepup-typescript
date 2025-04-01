@@ -5,7 +5,7 @@
 ## Release
 
 * [5.8](release/5.8/README.md)
-  * [plan: Checked Return Statements for Conditional and Indexed Access Types](release/5.8/plan-checked-return-statements-for-conditional-and-indexed-access-types.md)
+  * [Granular Checks for Branches in Return Expressions](release/5.8/granular-checks-for-branches-in-return-expressions.md)
   * [plan: --erasableSyntaxOnly Flag](release/5.8/plan-erasablesyntaxonly-flag.md)
 * [5.7](release/5.7/README.md)
   * [Checks for Never-Initialized Variables](release/5.7/checks-for-never-initialized-variables.md)

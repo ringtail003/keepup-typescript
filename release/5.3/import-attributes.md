@@ -4,7 +4,7 @@
 
 ECMAScriptの `Import Attributes` 構文をサポートした。
 
-[https://app.gitbook.com/o/UdQ1oyvbJoi9eJ7Jfkiq/s/vnW4VLmDDZnkg6kDdouY/proposal/import-attribute](https://app.gitbook.com/s/vnW4VLmDDZnkg6kDdouY/proposal/import-attribute)
+[https://app.gitbook.com/o/UdQ1oyvbJoi9eJ7Jfkiq/s/vnW4VLmDDZnkg6kDdouY/proposal/import-attribute](https://app.gitbook.com/s/vnW4VLmDDZnkg6kDdouY/es2025/import-attributes)
 
 ```typescript
 import obj from "./foo.json" with { type: "json" };
