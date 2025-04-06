@@ -9,6 +9,7 @@
   * [Support for require() of ECMAScript Module in \`--module nodenext\`](release/5.8/support-for-require-of-ecmascript-module-in-module-nodenext.md)
   * [\`--module node18\`](release/5.8/module-node18.md)
   * [--erasableSyntaxOnly Flag](release/5.8/erasablesyntaxonly-flag.md)
+  * [The \`--lib Replacement\` Flag](release/5.8/the-lib-replacement-flag.md)
 * [5.7](release/5.7/README.md)
   * [Checks for Never-Initialized Variables](release/5.7/checks-for-never-initialized-variables.md)
   * [Path Rewriting for Relative Paths](release/5.7/path-rewriting-for-relative-paths.md)
