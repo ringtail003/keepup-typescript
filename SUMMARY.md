@@ -4,6 +4,9 @@
 
 ## Release
 
+* [5.9](release/5.9/README.md)
+  * [Minimal and Updated tsc --init](release/5.9/minimal-and-updated-tsc-init.md)
+  * [Support for import defer](release/5.9/support-for-import-defer.md)
 * [5.8](release/5.8/README.md)
   * [Granular Checks for Branches in Return Expressions](release/5.8/plan-checked-return-statements-for-conditional-and-indexed-access-types.md)
   * [Support for require() of ECMAScript Module in \`--module nodenext\`](release/5.8/support-for-require-of-ecmascript-module-in-module-nodenext.md)
