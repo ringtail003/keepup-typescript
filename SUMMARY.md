@@ -4,6 +4,8 @@
 
 ## Release
 
+* [6.0](release/6.0/README.md)
+  * [Less Context-Sensitivity on  this -less Functions](release/6.0/less-context-sensitivity-on-this-less-functions.md)
 * [5.9](release/5.9/README.md)
   * [Minimal and Updated tsc --init](release/5.9/minimal-and-updated-tsc-init.md)
   * [Support for import defer](release/5.9/support-for-import-defer.md)
