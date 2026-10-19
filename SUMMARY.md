@@ -13,6 +13,7 @@
   * [New Types Temporal](release/6.0/new-types-temporal.md)
   * [New Types for "upsert" Methods](release/6.0/new-types-for-upsert-methods.md)
   * [RegExp.escape](release/6.0/regexp.escape.md)
+  * [The dom lib Now Contains dom.iterable and dom.asynciterable](release/6.0/the-dom-lib-now-contains-dom.iterable-and-dom.asynciterable.md)
 * [5.9](release/5.9/README.md)
   * [Minimal and Updated tsc --init](release/5.9/minimal-and-updated-tsc-init.md)
   * [Support for import defer](release/5.9/support-for-import-defer.md)
