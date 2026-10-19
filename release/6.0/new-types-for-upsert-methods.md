@@ -7,3 +7,7 @@ Map.getOrInsert メソッドが推論されるようになった。
 
 [https://github.com/tc39/proposal-upsert](https://github.com/tc39/proposal-upsert)
 
+```
+new Map().getOrInert(value);
+new Map().getOrInsertComputed(() => {});
+```
