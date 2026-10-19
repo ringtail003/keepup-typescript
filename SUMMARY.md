@@ -11,6 +11,7 @@
   * [The --stableTypeOrdering Flag](release/6.0/the-stabletypeordering-flag.md)
   * [es2025 option for target and lib](release/6.0/es2025-option-for-target-and-lib.md)
   * [New Types Temporal](release/6.0/new-types-temporal.md)
+  * [New Types for "upsert" Methods](release/6.0/new-types-for-upsert-methods.md)
 * [5.9](release/5.9/README.md)
   * [Minimal and Updated tsc --init](release/5.9/minimal-and-updated-tsc-init.md)
   * [Support for import defer](release/5.9/support-for-import-defer.md)
