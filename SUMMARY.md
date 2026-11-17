@@ -4,6 +4,7 @@
 
 ## Release
 
+* [7.0](release/7.0.md)
 * [6.0](release/6.0/README.md)
   * [Less Context-Sensitivity on  this -less Functions](release/6.0/less-context-sensitivity-on-this-less-functions.md)
   * [Subpath Imports Starting with \`#/\`](release/6.0/subpath-imports-starting-with.md)
